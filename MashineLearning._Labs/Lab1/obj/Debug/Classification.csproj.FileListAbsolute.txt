@@ -1,0 +1,9 @@
+F:\УЧЁБА\ДНУ ФПМ\ПМ-14-.. 3 курс\VІ семестр\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\bin\Debug\Lab1.exe.config
+F:\УЧЁБА\ДНУ ФПМ\ПМ-14-.. 3 курс\VІ семестр\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\bin\Debug\Lab1.exe
+F:\УЧЁБА\ДНУ ФПМ\ПМ-14-.. 3 курс\VІ семестр\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\bin\Debug\Lab1.pdb
+F:\УЧЁБА\ДНУ ФПМ\ПМ-14-.. 3 курс\VІ семестр\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\Classification.csprojResolveAssemblyReference.cache
+F:\УЧЁБА\ДНУ ФПМ\ПМ-14-.. 3 курс\VІ семестр\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\MashineLearning.Classification.frmMashineLearning.resources
+F:\УЧЁБА\ДНУ ФПМ\ПМ-14-.. 3 курс\VІ семестр\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\MashineLearning.Classification.Properties.Resources.resources
+F:\УЧЁБА\ДНУ ФПМ\ПМ-14-.. 3 курс\VІ семестр\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\Classification.csproj.GenerateResource.Cache
+F:\УЧЁБА\ДНУ ФПМ\ПМ-14-.. 3 курс\VІ семестр\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\Lab1.exe
+F:\УЧЁБА\ДНУ ФПМ\ПМ-14-.. 3 курс\VІ семестр\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\Lab1.pdb
