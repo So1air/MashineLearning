@@ -35,13 +35,14 @@ namespace MashineLearning.Classification
         }
         
         private byte _countRowsInMatrix = 1, _countColumnsInMatrix = 1;
+        private short _dx, _dy;
         private PictureBox _screen;
         private Graphics _drawer;
 
         public Point GetMatrixCoord(Point coord_in_screen) //+
         {
             if ((coord_in_screen.X < _screen.Width) && (coord_in_screen.Y < _screen.Height))
-                return new Point(coord_in_screen.X / (_screen.Width / _countColumnsInMatrix), coord_in_screen.Y / (_screen.Height / _countRowsInMatrix));
+                return new Point(coord_in_screen.X / _dx /*(_screen.Width / _countColumnsInMatrix)*/, coord_in_screen.Y / _dy /* (_screen.Height / _countRowsInMatrix)*/);
             else return new Point(-1, -1);            
         }
         
@@ -49,15 +50,17 @@ namespace MashineLearning.Classification
         {
             if ((coord.X < _screen.Width) && (coord.Y < _screen.Height))
             {
-                int dx = _screen.Width / _countColumnsInMatrix,
-                    dy = _screen.Height / _countRowsInMatrix;
+                //int dx = _screen.Width / _countColumnsInMatrix,
+                //    dy = _screen.Height / _countRowsInMatrix;
 
                 if (EqualityColors(((Bitmap)_screen.Image).GetPixel(coord.X, coord.Y), _color0))
-                    _drawer.FillRectangle(new SolidBrush(_color1), (coord.X / dx) * dx, (coord.Y / dy) * dy, dx, dy);
+                    _drawer.FillRectangle(new SolidBrush(_color1), (coord.X / _dx) * _dx, (coord.Y / _dy) * _dy, _dx, _dy);
                 else                
-                    _drawer.FillRectangle(new SolidBrush(_color0), (coord.X / dx) * dx, (coord.Y / dy) * dy, dx, dy);
+                    _drawer.FillRectangle(new SolidBrush(_color0), (coord.X / _dx) * _dx, (coord.Y / _dy) * _dy, _dx, _dy);
   
                 _screen.Refresh();
+                int w_bugtest = _screen.Image.Width;
+
                 return true;                
             }
             else
@@ -73,13 +76,13 @@ namespace MashineLearning.Classification
         {
             if ((index_row < _countRowsInMatrix) && (index_col < _countColumnsInMatrix))
             {
-                int dx = _screen.Width / _countColumnsInMatrix,
-                    dy = _screen.Height / _countRowsInMatrix;
+                //int dx = _screen.Width / _countColumnsInMatrix,
+                //    dy = _screen.Height / _countRowsInMatrix;
 
-                if (EqualityColors(((Bitmap)_screen.Image).GetPixel(index_col * dx, index_row * dy), _color0))
-                    _drawer.FillRectangle(new SolidBrush(_color1), index_col * dx, index_row * dy, dx, dy);
+                if (EqualityColors(((Bitmap)_screen.Image).GetPixel(index_col * _dx, index_row * _dy), _color0))
+                    _drawer.FillRectangle(new SolidBrush(_color1), index_col * _dx, index_row * _dy, _dx, _dy);
                 else
-                    _drawer.FillRectangle(new SolidBrush(_color0), index_col * dx, index_row * dy, dx, dy);
+                    _drawer.FillRectangle(new SolidBrush(_color0), index_col * _dx, index_row * _dy, _dx, _dy);
                 _screen.Refresh();
                 return true;
             }
@@ -109,11 +112,11 @@ namespace MashineLearning.Classification
                 _screen.Enabled = false;
 
                 ImBinary im = new ImBinary(_countRowsInMatrix, _countColumnsInMatrix);
-                int dx = _screen.Width / _countColumnsInMatrix,
-                    dy = _screen.Height / _countRowsInMatrix;
+                //int dx = _screen.Width / _countColumnsInMatrix,
+                //    dy = _screen.Height / _countRowsInMatrix;
                 for (byte r = 0; r < _countRowsInMatrix; r++)
                     for (byte c = 0; c < _countColumnsInMatrix; c++)
-                        if (EqualityColors(((Bitmap)_screen.Image).GetPixel(c * dx, r * dy), _color0))
+                        if (EqualityColors(((Bitmap)_screen.Image).GetPixel(c * _dx, r * _dy), _color0))
                             im.SetProp((uint)(r * _countColumnsInMatrix + c), 0);
                         else
                             im.SetProp((uint)(r * _countColumnsInMatrix + c), 1);
@@ -143,9 +146,23 @@ namespace MashineLearning.Classification
                 _countRowsInMatrix = count_rows;
                 _countColumnsInMatrix = count_columns;
 
+                _dy = (short)(_screen.MaximumSize.Height / _countRowsInMatrix);
+                _dx = (short)(_screen.MaximumSize.Width / _countColumnsInMatrix);
+                if (_dx > _dy) //это условие делает точки на изображении квадратами
+                    _dx = _dy;
+                else
+                    _dy = _dx;
+
                 //змінюємо координати компонента відображення до кратних кількості рядків і стовпців матриці
-                _screen.Height = (_screen.MaximumSize.Height / _countRowsInMatrix) * _countRowsInMatrix;
-                _screen.Width = (_screen.MaximumSize.Width / _countColumnsInMatrix) * _countColumnsInMatrix;
+                //_screen.Height = (_screen.MaximumSize.Height / _countRowsInMatrix) * _countRowsInMatrix;
+                //_screen.Width = (_screen.MaximumSize.Width / _countColumnsInMatrix) * _countColumnsInMatrix;
+                _screen.Height = _dy * _countRowsInMatrix;
+                _screen.Width = _dx * _countColumnsInMatrix;
+
+                //костыльное исправление массштабирования битмапа 
+                _screen.Image = new Bitmap(_screen.Width, _screen.Height);
+                _drawer = Graphics.FromImage(_screen.Image);
+
                 ClearIm();
                 return true;
             }

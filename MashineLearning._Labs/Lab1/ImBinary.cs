@@ -14,7 +14,6 @@ namespace MashineLearning.Classification
 
     class ImBinary
     {
-        bool y;
         private byte[] _properties;
         private string _type = null;             
         private readonly byte _row_count, _col_count;

@@ -277,9 +277,10 @@ namespace MashineLearning.Classification
         private void dUD_ListImage_SelectedItemChanged(object sender, EventArgs e)
         {
             ImBinary currIm = null;
-            string[] parse = dUD_ListImage.SelectedItem.ToString().Split(new char[2]{'x', '_'}, 4);
             try
-            {
+            {            
+                string[] parse = dUD_ListImage.SelectedItem.ToString().Split(new char[2]{'x', '_'}, 4);
+
                 byte row_cou = Convert.ToByte(parse[1]),
                      col_cou = Convert.ToByte(parse[2]);
                 string typeModel = parse[3];
@@ -298,7 +299,8 @@ namespace MashineLearning.Classification
             }
             catch (Exception) 
             {
-                dUD_ListImage.Items.Remove(dUD_ListImage.SelectedItem);
+                if (dUD_ListImage.SelectedItem != null)
+                    dUD_ListImage.Items.Remove(dUD_ListImage.SelectedItem);
                 if (dUD_ListImage.Items.Count != 0)
                     dUD_ListImage.SelectedIndex = dUD_ListImage.Items.Count - 1;
                 else
@@ -308,7 +310,7 @@ namespace MashineLearning.Classification
                 }
                 return;
             }
-
+            
             if (currIm != null)
             {
                 nUD_RowCount.Value = currIm.RowCount;
@@ -410,7 +412,7 @@ namespace MashineLearning.Classification
             grB_CreateNoisyImages.Visible = true;
             btnAddModel.Visible = true;
             txB_NameTypeModel.ReadOnly = false;
-
+            
             dUD_ListImage_SelectedItemChanged(this.dUD_ListImage, new EventArgs());
         }
 
