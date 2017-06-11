@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -34,19 +30,19 @@ namespace MashineLearning.Classification
             }
         }
         
-        private byte _countRowsInMatrix = 1, _countColumnsInMatrix = 1;
-        private short _dx, _dy;
-        private PictureBox _screen;
-        private Graphics _drawer;
+        protected byte _countRowsInMatrix = 1, _countColumnsInMatrix = 1;
+        protected short _dx, _dy;
+        protected PictureBox _screen;
+        protected Graphics _drawer;
 
-        public Point GetMatrixCoord(Point coord_in_screen) //+
+        public Point GetMatrixCoord(Point coord_in_screen) 
         {
             if ((coord_in_screen.X < _screen.Width) && (coord_in_screen.Y < _screen.Height))
                 return new Point(coord_in_screen.X / _dx /*(_screen.Width / _countColumnsInMatrix)*/, coord_in_screen.Y / _dy /* (_screen.Height / _countRowsInMatrix)*/);
             else return new Point(-1, -1);            
         }
         
-        public bool DrawBinaryPoint(Point coord)  //+
+        public bool DrawBinaryPoint(Point coord)  
         {
             if ((coord.X < _screen.Width) && (coord.Y < _screen.Height))
             {
@@ -67,12 +63,12 @@ namespace MashineLearning.Classification
                 return false;
         }
 
-        private bool EqualityColors(Color c1, Color c2)
+        protected bool EqualityColors(Color c1, Color c2)
         {
             return c1.ToArgb() == c2.ToArgb();
         }
 
-        public bool DrawBinaryPoint(byte index_row, byte index_col) //+
+        public bool DrawBinaryPoint(byte index_row, byte index_col)
         {
             if ((index_row < _countRowsInMatrix) && (index_col < _countColumnsInMatrix))
             {
@@ -90,7 +86,29 @@ namespace MashineLearning.Classification
                 return false;
         }
 
-        public bool DrawIm(ImBinary im) //+
+        public bool DrawBinaryPoint (uint numPoint, Color colorSelection)
+        {
+            if (numPoint < _countRowsInMatrix * _countColumnsInMatrix)
+            {
+                _drawer.FillRectangle(new SolidBrush(colorSelection), (numPoint % _countColumnsInMatrix) * _dx + 1, (numPoint / _countColumnsInMatrix) * _dy + 1, _dx - 1, _dy - 1);
+                _screen.Refresh();
+                return true;
+            }
+            else
+                return false;
+        }
+
+        public void DrawBinaryPoints(uint[] numPoints, Color colorSelection)
+        {
+            foreach(uint numPoint in numPoints)
+                if (numPoint < _countRowsInMatrix * _countColumnsInMatrix)
+                {
+                    _drawer.FillRectangle(new SolidBrush(colorSelection), (numPoint % _countColumnsInMatrix) * _dx + 1, (numPoint / _countColumnsInMatrix) * _dy + 1, _dx - 2, _dy - 2);                
+                }
+            _screen.Refresh();
+        }
+
+        public bool DrawIm(ImBinary im) 
         {
             if (im != null)
             {
@@ -98,14 +116,16 @@ namespace MashineLearning.Classification
                 for (byte r = 0; r < im.RowCount; r++)
                     for (byte c = 0; c < im.ColumnCount; c++)
                         if(im.GetProp((uint)(r * im.ColumnCount + c)) == 1) 
-                            DrawBinaryPoint(r, c);
+                            //DrawBinaryPoint(r, c);
+                            _drawer.FillRectangle(new SolidBrush(_color1), c * _dx, r * _dy, _dx, _dy);
+                _screen.Refresh();
                 return true;
             }
             else
                 return false;
         }
 
-        public ImBinary GetIm() //+
+        public ImBinary GetIm() 
         {
             //if (_screen.Enabled)
             //{
@@ -128,7 +148,7 @@ namespace MashineLearning.Classification
             //    return null;
         }
 
-        public bool ClearIm() //+
+        public bool ClearIm() 
         {
             if (_drawer != null)
             {
@@ -139,7 +159,7 @@ namespace MashineLearning.Classification
             else return false;
         }
 
-        public bool ChangeParamMatrix(byte count_rows, byte count_columns) //+
+        public bool ChangeParamMatrix(byte count_rows, byte count_columns) 
         {
             if ((count_rows > 0) && (count_columns > 0) && (count_rows < _screen.MaximumSize.Height) && (count_columns < _screen.MaximumSize.Width))
             {
@@ -170,17 +190,16 @@ namespace MashineLearning.Classification
                 return false;            
         }
 
-        public DrawerImBinary(ref PictureBox screen, byte count_rows, byte count_columns) //+
+        public DrawerImBinary(ref PictureBox screen, byte count_rows, byte count_columns) 
         {
             _screen = screen;
 
             if (screen != null)
             {
-                _screen.Image = new Bitmap(_screen.MaximumSize.Width, _screen.MaximumSize.Height);
-                _drawer = Graphics.FromImage(screen.Image); 
-                ClearIm();
-                ChangeParamMatrix(count_rows, count_columns);
-               
+                //_screen.Image = new Bitmap(_screen.MaximumSize.Width, _screen.MaximumSize.Height);
+                //_drawer = Graphics.FromImage(screen.Image); 
+                //ClearIm();
+                ChangeParamMatrix(count_rows, count_columns);               
             }
         }
     }

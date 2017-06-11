@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.tbC_Main = new System.Windows.Forms.TabControl();
-            this.tbP_CreateImages = new System.Windows.Forms.TabPage();
+            this.tbP_LearnAndTestImages = new System.Windows.Forms.TabPage();
+            this.txB_NumChooseIm = new System.Windows.Forms.TextBox();
             this.lblCursorPosInMatrCoord = new System.Windows.Forms.Label();
             this.lblCurrMatrCoord = new System.Windows.Forms.Label();
             this.btnDeleteIm = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             this.lblParMatrix = new System.Windows.Forms.Label();
             this.nUD_RowCount = new System.Windows.Forms.NumericUpDown();
             this.pnl_SaveAndLoad = new System.Windows.Forms.Panel();
+            this.chB_CheckAll = new System.Windows.Forms.CheckBox();
             this.chB_RandomOrder = new System.Windows.Forms.CheckBox();
             this.btnLoadFromFile = new System.Windows.Forms.Button();
             this.btnSaveInFile = new System.Windows.Forms.Button();
@@ -63,10 +65,21 @@
             this.btnCreateNoisyImage = new System.Windows.Forms.Button();
             this.dUD_ListImage = new System.Windows.Forms.DomainUpDown();
             this.pcB_Image = new System.Windows.Forms.PictureBox();
+            this.tbP_SelectLearnDataAndAddClassificator = new System.Windows.Forms.TabPage();
+            this.grB_CreateClassificator = new System.Windows.Forms.GroupBox();
+            this.pcB_DemoLearnIm = new System.Windows.Forms.PictureBox();
+            this.lblStatusCreateClassificator = new System.Windows.Forms.Label();
+            this.btnCreateClassificator = new System.Windows.Forms.Button();
+            this.cLB_LearnImages = new System.Windows.Forms.CheckedListBox();
+            this.lblDimensionality = new System.Windows.Forms.Label();
+            this.cmB_Dimensionalitys = new System.Windows.Forms.ComboBox();
+            this.tbP_TestingClassificators = new System.Windows.Forms.TabPage();
+            this.tbP_EstimationQualityClassication = new System.Windows.Forms.TabPage();
+            this.tbP_Classification = new System.Windows.Forms.TabPage();
             this.oFD_Loader = new System.Windows.Forms.OpenFileDialog();
             this.sFD_Saver = new System.Windows.Forms.SaveFileDialog();
             this.tbC_Main.SuspendLayout();
-            this.tbP_CreateImages.SuspendLayout();
+            this.tbP_LearnAndTestImages.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUD_ColCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUD_RowCount)).BeginInit();
             this.pnl_SaveAndLoad.SuspendLayout();
@@ -75,11 +88,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.nUD_EpsNoisy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUD_CountNoisy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcB_Image)).BeginInit();
+            this.tbP_SelectLearnDataAndAddClassificator.SuspendLayout();
+            this.grB_CreateClassificator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcB_DemoLearnIm)).BeginInit();
             this.SuspendLayout();
             // 
             // tbC_Main
             // 
-            this.tbC_Main.Controls.Add(this.tbP_CreateImages);
+            this.tbC_Main.Controls.Add(this.tbP_LearnAndTestImages);
+            this.tbC_Main.Controls.Add(this.tbP_SelectLearnDataAndAddClassificator);
+            this.tbC_Main.Controls.Add(this.tbP_TestingClassificators);
+            this.tbC_Main.Controls.Add(this.tbP_EstimationQualityClassication);
+            this.tbC_Main.Controls.Add(this.tbP_Classification);
             this.tbC_Main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbC_Main.Location = new System.Drawing.Point(0, 0);
             this.tbC_Main.Name = "tbC_Main";
@@ -87,30 +107,43 @@
             this.tbC_Main.Size = new System.Drawing.Size(1020, 541);
             this.tbC_Main.TabIndex = 0;
             // 
-            // tbP_CreateImages
+            // tbP_LearnAndTestImages
             // 
-            this.tbP_CreateImages.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbP_CreateImages.Controls.Add(this.lblCursorPosInMatrCoord);
-            this.tbP_CreateImages.Controls.Add(this.lblCurrMatrCoord);
-            this.tbP_CreateImages.Controls.Add(this.btnDeleteIm);
-            this.tbP_CreateImages.Controls.Add(this.btnChangeIm);
-            this.tbP_CreateImages.Controls.Add(this.btnCancelIm);
-            this.tbP_CreateImages.Controls.Add(this.btnAcceptIm);
-            this.tbP_CreateImages.Controls.Add(this.nUD_ColCount);
-            this.tbP_CreateImages.Controls.Add(this.lbl_ColCount);
-            this.tbP_CreateImages.Controls.Add(this.lbl_RowCount);
-            this.tbP_CreateImages.Controls.Add(this.lblParMatrix);
-            this.tbP_CreateImages.Controls.Add(this.nUD_RowCount);
-            this.tbP_CreateImages.Controls.Add(this.pnl_SaveAndLoad);
-            this.tbP_CreateImages.Controls.Add(this.grB_AddModel);
-            this.tbP_CreateImages.Controls.Add(this.grB_CreateNoisyImages);
-            this.tbP_CreateImages.Controls.Add(this.dUD_ListImage);
-            this.tbP_CreateImages.Controls.Add(this.pcB_Image);
-            this.tbP_CreateImages.Location = new System.Drawing.Point(4, 22);
-            this.tbP_CreateImages.Name = "tbP_CreateImages";
-            this.tbP_CreateImages.Padding = new System.Windows.Forms.Padding(3);
-            this.tbP_CreateImages.Size = new System.Drawing.Size(1012, 515);
-            this.tbP_CreateImages.TabIndex = 0;
+            this.tbP_LearnAndTestImages.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbP_LearnAndTestImages.Controls.Add(this.txB_NumChooseIm);
+            this.tbP_LearnAndTestImages.Controls.Add(this.lblCursorPosInMatrCoord);
+            this.tbP_LearnAndTestImages.Controls.Add(this.lblCurrMatrCoord);
+            this.tbP_LearnAndTestImages.Controls.Add(this.btnDeleteIm);
+            this.tbP_LearnAndTestImages.Controls.Add(this.btnChangeIm);
+            this.tbP_LearnAndTestImages.Controls.Add(this.btnCancelIm);
+            this.tbP_LearnAndTestImages.Controls.Add(this.btnAcceptIm);
+            this.tbP_LearnAndTestImages.Controls.Add(this.nUD_ColCount);
+            this.tbP_LearnAndTestImages.Controls.Add(this.lbl_ColCount);
+            this.tbP_LearnAndTestImages.Controls.Add(this.lbl_RowCount);
+            this.tbP_LearnAndTestImages.Controls.Add(this.lblParMatrix);
+            this.tbP_LearnAndTestImages.Controls.Add(this.nUD_RowCount);
+            this.tbP_LearnAndTestImages.Controls.Add(this.pnl_SaveAndLoad);
+            this.tbP_LearnAndTestImages.Controls.Add(this.grB_AddModel);
+            this.tbP_LearnAndTestImages.Controls.Add(this.grB_CreateNoisyImages);
+            this.tbP_LearnAndTestImages.Controls.Add(this.dUD_ListImage);
+            this.tbP_LearnAndTestImages.Controls.Add(this.pcB_Image);
+            this.tbP_LearnAndTestImages.Location = new System.Drawing.Point(4, 22);
+            this.tbP_LearnAndTestImages.Name = "tbP_LearnAndTestImages";
+            this.tbP_LearnAndTestImages.Padding = new System.Windows.Forms.Padding(3);
+            this.tbP_LearnAndTestImages.Size = new System.Drawing.Size(1012, 515);
+            this.tbP_LearnAndTestImages.TabIndex = 0;
+            this.tbP_LearnAndTestImages.Text = "Навчально-тестові образи";
+            // 
+            // txB_NumChooseIm
+            // 
+            this.txB_NumChooseIm.Location = new System.Drawing.Point(907, 15);
+            this.txB_NumChooseIm.Name = "txB_NumChooseIm";
+            this.txB_NumChooseIm.Size = new System.Drawing.Size(77, 20);
+            this.txB_NumChooseIm.TabIndex = 17;
+            this.txB_NumChooseIm.Text = "--/0";
+            this.txB_NumChooseIm.Enter += new System.EventHandler(this.txB_NumChooseIm_Enter);
+            this.txB_NumChooseIm.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txB_NumChooseIm_KeyDown);
+            this.txB_NumChooseIm.Validated += new System.EventHandler(this.txB_NumChooseIm_Validated);
             // 
             // lblCursorPosInMatrCoord
             // 
@@ -253,6 +286,7 @@
             // 
             this.pnl_SaveAndLoad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnl_SaveAndLoad.Controls.Add(this.chB_CheckAll);
             this.pnl_SaveAndLoad.Controls.Add(this.chB_RandomOrder);
             this.pnl_SaveAndLoad.Controls.Add(this.btnLoadFromFile);
             this.pnl_SaveAndLoad.Controls.Add(this.btnSaveInFile);
@@ -262,6 +296,18 @@
             this.pnl_SaveAndLoad.Name = "pnl_SaveAndLoad";
             this.pnl_SaveAndLoad.Size = new System.Drawing.Size(444, 201);
             this.pnl_SaveAndLoad.TabIndex = 7;
+            // 
+            // chB_CheckAll
+            // 
+            this.chB_CheckAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.chB_CheckAll.AutoSize = true;
+            this.chB_CheckAll.Location = new System.Drawing.Point(9, 182);
+            this.chB_CheckAll.Name = "chB_CheckAll";
+            this.chB_CheckAll.Size = new System.Drawing.Size(77, 17);
+            this.chB_CheckAll.TabIndex = 5;
+            this.chB_CheckAll.Text = "обрати усі";
+            this.chB_CheckAll.UseVisualStyleBackColor = true;
+            this.chB_CheckAll.CheckedChanged += new System.EventHandler(this.chB_CheckAll_CheckedChanged);
             // 
             // chB_RandomOrder
             // 
@@ -308,9 +354,13 @@
             this.cLB_ListAvalaibleImages.FormattingEnabled = true;
             this.cLB_ListAvalaibleImages.Location = new System.Drawing.Point(9, 25);
             this.cLB_ListAvalaibleImages.Name = "cLB_ListAvalaibleImages";
-            this.cLB_ListAvalaibleImages.Size = new System.Drawing.Size(305, 169);
+            this.cLB_ListAvalaibleImages.Size = new System.Drawing.Size(305, 154);
             this.cLB_ListAvalaibleImages.TabIndex = 1;
             this.cLB_ListAvalaibleImages.ThreeDCheckBoxes = true;
+            this.cLB_ListAvalaibleImages.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cLB_MouseClick);
+            this.cLB_ListAvalaibleImages.SelectedIndexChanged += new System.EventHandler(this.cLB_ListAvalaibleImages_SelectedIndexChanged);
+            this.cLB_ListAvalaibleImages.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cLB_KeyDown);
+            this.cLB_ListAvalaibleImages.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cLB_KeyUp);
             // 
             // lblListAvalaibleImages
             // 
@@ -508,16 +558,13 @@
             this.dUD_ListImage.Location = new System.Drawing.Point(484, 15);
             this.dUD_ListImage.Name = "dUD_ListImage";
             this.dUD_ListImage.ReadOnly = true;
-            this.dUD_ListImage.Size = new System.Drawing.Size(500, 20);
+            this.dUD_ListImage.Size = new System.Drawing.Size(414, 20);
             this.dUD_ListImage.TabIndex = 1;
-            this.dUD_ListImage.Text = "<список пустий>";
+            this.dUD_ListImage.Text = "<доступних образів немає>";
             this.dUD_ListImage.SelectedItemChanged += new System.EventHandler(this.dUD_ListImage_SelectedItemChanged);
             // 
             // pcB_Image
             // 
-            this.pcB_Image.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pcB_Image.BackColor = System.Drawing.Color.White;
             this.pcB_Image.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pcB_Image.Enabled = false;
@@ -531,6 +578,134 @@
             this.pcB_Image.TabStop = false;
             this.pcB_Image.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pcB_Image_MouseDown);
             this.pcB_Image.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pcB_Image_MouseMove);
+            // 
+            // tbP_SelectLearnDataAndAddClassificator
+            // 
+            this.tbP_SelectLearnDataAndAddClassificator.Controls.Add(this.grB_CreateClassificator);
+            this.tbP_SelectLearnDataAndAddClassificator.Location = new System.Drawing.Point(4, 22);
+            this.tbP_SelectLearnDataAndAddClassificator.Name = "tbP_SelectLearnDataAndAddClassificator";
+            this.tbP_SelectLearnDataAndAddClassificator.Padding = new System.Windows.Forms.Padding(3);
+            this.tbP_SelectLearnDataAndAddClassificator.Size = new System.Drawing.Size(1012, 515);
+            this.tbP_SelectLearnDataAndAddClassificator.TabIndex = 1;
+            this.tbP_SelectLearnDataAndAddClassificator.Text = "Cтворення нового класифікатора";
+            this.tbP_SelectLearnDataAndAddClassificator.UseVisualStyleBackColor = true;
+            this.tbP_SelectLearnDataAndAddClassificator.Enter += new System.EventHandler(this.tbP_SelectLearnDataAndAddClassificator_Enter);
+            // 
+            // grB_CreateClassificator
+            // 
+            this.grB_CreateClassificator.Controls.Add(this.pcB_DemoLearnIm);
+            this.grB_CreateClassificator.Controls.Add(this.lblStatusCreateClassificator);
+            this.grB_CreateClassificator.Controls.Add(this.btnCreateClassificator);
+            this.grB_CreateClassificator.Controls.Add(this.cLB_LearnImages);
+            this.grB_CreateClassificator.Controls.Add(this.lblDimensionality);
+            this.grB_CreateClassificator.Controls.Add(this.cmB_Dimensionalitys);
+            this.grB_CreateClassificator.Location = new System.Drawing.Point(8, 6);
+            this.grB_CreateClassificator.Name = "grB_CreateClassificator";
+            this.grB_CreateClassificator.Size = new System.Drawing.Size(721, 501);
+            this.grB_CreateClassificator.TabIndex = 0;
+            this.grB_CreateClassificator.TabStop = false;
+            this.grB_CreateClassificator.Text = "Створення класифікатора";
+            // 
+            // pcB_DemoLearnIm
+            // 
+            this.pcB_DemoLearnIm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pcB_DemoLearnIm.BackColor = System.Drawing.Color.White;
+            this.pcB_DemoLearnIm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pcB_DemoLearnIm.Location = new System.Drawing.Point(215, 19);
+            this.pcB_DemoLearnIm.MaximumSize = new System.Drawing.Size(500, 400);
+            this.pcB_DemoLearnIm.MinimumSize = new System.Drawing.Size(100, 100);
+            this.pcB_DemoLearnIm.Name = "pcB_DemoLearnIm";
+            this.pcB_DemoLearnIm.Size = new System.Drawing.Size(500, 400);
+            this.pcB_DemoLearnIm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcB_DemoLearnIm.TabIndex = 6;
+            this.pcB_DemoLearnIm.TabStop = false;
+            // 
+            // lblStatusCreateClassificator
+            // 
+            this.lblStatusCreateClassificator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblStatusCreateClassificator.AutoSize = true;
+            this.lblStatusCreateClassificator.Location = new System.Drawing.Point(6, 482);
+            this.lblStatusCreateClassificator.Name = "lblStatusCreateClassificator";
+            this.lblStatusCreateClassificator.Size = new System.Drawing.Size(35, 13);
+            this.lblStatusCreateClassificator.TabIndex = 5;
+            this.lblStatusCreateClassificator.Text = "status";
+            // 
+            // btnCreateClassificator
+            // 
+            this.btnCreateClassificator.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCreateClassificator.Location = new System.Drawing.Point(6, 453);
+            this.btnCreateClassificator.Name = "btnCreateClassificator";
+            this.btnCreateClassificator.Size = new System.Drawing.Size(203, 23);
+            this.btnCreateClassificator.TabIndex = 4;
+            this.btnCreateClassificator.Text = "Створити";
+            this.btnCreateClassificator.UseVisualStyleBackColor = true;
+            this.btnCreateClassificator.Click += new System.EventHandler(this.btnCreateClassificator_Click);
+            // 
+            // cLB_LearnImages
+            // 
+            this.cLB_LearnImages.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cLB_LearnImages.CheckOnClick = true;
+            this.cLB_LearnImages.FormattingEnabled = true;
+            this.cLB_LearnImages.Location = new System.Drawing.Point(6, 65);
+            this.cLB_LearnImages.Name = "cLB_LearnImages";
+            this.cLB_LearnImages.Size = new System.Drawing.Size(203, 364);
+            this.cLB_LearnImages.TabIndex = 3;
+            this.cLB_LearnImages.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cLB_MouseClick);
+            this.cLB_LearnImages.SelectedIndexChanged += new System.EventHandler(this.cLB_LearnImages_SelectedIndexChanged);
+            this.cLB_LearnImages.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cLB_KeyDown);
+            this.cLB_LearnImages.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cLB_KeyUp);
+            // 
+            // lblDimensionality
+            // 
+            this.lblDimensionality.AutoSize = true;
+            this.lblDimensionality.Location = new System.Drawing.Point(6, 22);
+            this.lblDimensionality.Name = "lblDimensionality";
+            this.lblDimensionality.Size = new System.Drawing.Size(70, 13);
+            this.lblDimensionality.TabIndex = 2;
+            this.lblDimensionality.Text = "Розмірність:";
+            // 
+            // cmB_Dimensionalitys
+            // 
+            this.cmB_Dimensionalitys.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmB_Dimensionalitys.FormattingEnabled = true;
+            this.cmB_Dimensionalitys.Location = new System.Drawing.Point(6, 38);
+            this.cmB_Dimensionalitys.Name = "cmB_Dimensionalitys";
+            this.cmB_Dimensionalitys.Size = new System.Drawing.Size(203, 21);
+            this.cmB_Dimensionalitys.TabIndex = 1;
+            this.cmB_Dimensionalitys.SelectedIndexChanged += new System.EventHandler(this.cmB_Dimensionalitys_SelectedIndexChanged);
+            // 
+            // tbP_TestingClassificators
+            // 
+            this.tbP_TestingClassificators.Location = new System.Drawing.Point(4, 22);
+            this.tbP_TestingClassificators.Name = "tbP_TestingClassificators";
+            this.tbP_TestingClassificators.Size = new System.Drawing.Size(1012, 515);
+            this.tbP_TestingClassificators.TabIndex = 2;
+            this.tbP_TestingClassificators.Text = "Тестування класифікаторів";
+            this.tbP_TestingClassificators.UseVisualStyleBackColor = true;
+            // 
+            // tbP_EstimationQualityClassication
+            // 
+            this.tbP_EstimationQualityClassication.Location = new System.Drawing.Point(4, 22);
+            this.tbP_EstimationQualityClassication.Name = "tbP_EstimationQualityClassication";
+            this.tbP_EstimationQualityClassication.Padding = new System.Windows.Forms.Padding(3);
+            this.tbP_EstimationQualityClassication.Size = new System.Drawing.Size(1012, 515);
+            this.tbP_EstimationQualityClassication.TabIndex = 3;
+            this.tbP_EstimationQualityClassication.Text = "Оцінка якості класифікації";
+            this.tbP_EstimationQualityClassication.UseVisualStyleBackColor = true;
+            // 
+            // tbP_Classification
+            // 
+            this.tbP_Classification.Location = new System.Drawing.Point(4, 22);
+            this.tbP_Classification.Name = "tbP_Classification";
+            this.tbP_Classification.Padding = new System.Windows.Forms.Padding(3);
+            this.tbP_Classification.Size = new System.Drawing.Size(1012, 515);
+            this.tbP_Classification.TabIndex = 4;
+            this.tbP_Classification.Text = "Класифікація образів";
+            this.tbP_Classification.UseVisualStyleBackColor = true;
             // 
             // oFD_Loader
             // 
@@ -556,8 +731,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Класифікація образів";
             this.tbC_Main.ResumeLayout(false);
-            this.tbP_CreateImages.ResumeLayout(false);
-            this.tbP_CreateImages.PerformLayout();
+            this.tbP_LearnAndTestImages.ResumeLayout(false);
+            this.tbP_LearnAndTestImages.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUD_ColCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUD_RowCount)).EndInit();
             this.pnl_SaveAndLoad.ResumeLayout(false);
@@ -569,6 +744,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.nUD_EpsNoisy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUD_CountNoisy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcB_Image)).EndInit();
+            this.tbP_SelectLearnDataAndAddClassificator.ResumeLayout(false);
+            this.grB_CreateClassificator.ResumeLayout(false);
+            this.grB_CreateClassificator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcB_DemoLearnIm)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -576,7 +755,7 @@
         #endregion
 
         private System.Windows.Forms.TabControl tbC_Main;
-        private System.Windows.Forms.TabPage tbP_CreateImages;
+        private System.Windows.Forms.TabPage tbP_LearnAndTestImages;
         private System.Windows.Forms.GroupBox grB_CreateNoisyImages;
         private System.Windows.Forms.NumericUpDown nUD_CountNoisy;
         private System.Windows.Forms.Label lblCountNoisy;
@@ -612,6 +791,19 @@
         private System.Windows.Forms.Label lblCursorPosInMatrCoord;
         private System.Windows.Forms.Label lblCurrMatrCoord;
         private System.Windows.Forms.CheckBox chB_RandomOrder;
+        private System.Windows.Forms.TabPage tbP_SelectLearnDataAndAddClassificator;
+        private System.Windows.Forms.TextBox txB_NumChooseIm;
+        private System.Windows.Forms.CheckBox chB_CheckAll;
+        private System.Windows.Forms.TabPage tbP_TestingClassificators;
+        private System.Windows.Forms.TabPage tbP_EstimationQualityClassication;
+        private System.Windows.Forms.TabPage tbP_Classification;
+        private System.Windows.Forms.GroupBox grB_CreateClassificator;
+        private System.Windows.Forms.CheckedListBox cLB_LearnImages;
+        private System.Windows.Forms.Label lblDimensionality;
+        private System.Windows.Forms.ComboBox cmB_Dimensionalitys;
+        private System.Windows.Forms.Label lblStatusCreateClassificator;
+        private System.Windows.Forms.Button btnCreateClassificator;
+        private System.Windows.Forms.PictureBox pcB_DemoLearnIm;
     }
 }
 

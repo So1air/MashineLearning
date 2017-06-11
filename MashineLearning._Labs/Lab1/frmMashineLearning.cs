@@ -15,16 +15,25 @@ namespace MashineLearning.Classification
     {
         const char MARK_MODEL = 'M',
                    MARK_NOISE_IMAGE = 'N';
-
+        //lab1
         CollectionOfImBinarys _collectionAvalaibleImages = new CollectionOfImBinarys();
-        DrawerImBinary _drawerImages;
+        DrawerImBinary _drawerImages;        
+        int _oldSelectIndex = 0;
+        bool _multiSelect = false;
+        //lab2
+        DecisionTreeForImBinary _currClassificator;
+        List<DecisionTreeForImBinary> _classificators = new List<DecisionTreeForImBinary>();
+        DrawerImBinary _drawerLearnIm;
+        Color _colorSelectionImpProp = Color.Yellow;
 
         public frmMashineLearning()
         {
             InitializeComponent();
             _drawerImages = new DrawerImBinary(ref pcB_Image, (byte)(nUD_RowCount.Value), (byte)(nUD_ColCount.Value));
+            _drawerLearnIm = new DrawerImBinary(ref pcB_DemoLearnIm, (byte)(nUD_RowCount.Value), (byte)(nUD_ColCount.Value));
             lblStatusCreateNoisy.Text = "";
             lblStatusNameModel.Text = "";
+            lblStatusCreateClassificator.Text = "";
         }    
 
         private void btnAddModel_Click(object sender, EventArgs e)
@@ -236,23 +245,29 @@ namespace MashineLearning.Classification
                         else 
                             orderWrite = direct_order.ToArray<int>();                        
                         
+                        byte old_row_cou = 0, 
+                             old_col_cou = 0;
                         foreach (int nextIm in orderWrite)
                         {
                             parse = cLB_ListAvalaibleImages.Items[nextIm].ToString().Split(new char[2]{'_', 'x'}, 4);
                             if (parse.Length > 0)
                             {
                                 row_cou = Convert.ToByte(parse[1]);
-                                col_cou = Convert.ToByte(parse[2]);
+                                col_cou = Convert.ToByte(parse[2]);                                        
+                                if ((row_cou != old_row_cou) || (col_cou != old_col_cou))
+                                {
+                                    saver.WriteLine(row_cou.ToString() + " " + col_cou.ToString());
+                                    old_row_cou = row_cou;
+                                    old_col_cou = col_cou;
+                                }
                                 switch (parse[0][0])
                                 {
                                     case MARK_MODEL:
                                         saveIm = _collectionAvalaibleImages.GetModel(row_cou, col_cou, parse[3]);
-                                        saver.WriteLine(row_cou.ToString() + " " + col_cou.ToString());
                                         saver.WriteLine(MARK_MODEL.ToString() + " " + saveIm.ToString());
                                         break;
                                     case MARK_NOISE_IMAGE:
                                         saveIm = _collectionAvalaibleImages.GetNoiseImage(row_cou, col_cou, parse[3], Convert.ToUInt32(parse[0].Substring(1)));
-                                        saver.WriteLine(row_cou.ToString() + " " + col_cou.ToString());
                                         saver.WriteLine(MARK_NOISE_IMAGE.ToString() + " " + saveIm.ToString());
                                         break;
                                     default:
@@ -306,6 +321,7 @@ namespace MashineLearning.Classification
                 else
                 {
                     dUD_ListImage.Text = "<доступних образів немає>";
+                    txB_NumChooseIm.Text = "--/0";
                     _drawerImages.ClearIm();
                 }
                 return;
@@ -317,6 +333,7 @@ namespace MashineLearning.Classification
                 nUD_ColCount.Value = currIm.ColumnCount;
                 if (!(_drawerImages.DrawIm(currIm)))
                     _drawerImages.ClearIm();
+                txB_NumChooseIm.Text = dUD_ListImage.SelectedIndex + 1 + "/" + dUD_ListImage.Items.Count;
             }
             else
             {
@@ -430,6 +447,181 @@ namespace MashineLearning.Classification
         {
             if (nUD_EpsNoisy.Value == 0)
                 nUD_EpsNoisy.Value = (decimal)Math.Pow(10, -nUD_EpsNoisy.DecimalPlaces);
-        }        
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            _drawerImages.DrawBinaryPoint(0, Color.YellowGreen);
+            _drawerImages.DrawBinaryPoint(599, Color.YellowGreen);
+            _drawerImages.DrawBinaryPoint(580, Color.YellowGreen);
+            _drawerImages.DrawBinaryPoint(19, Color.YellowGreen);
+            _drawerImages.DrawBinaryPoint(289, Color.YellowGreen);
+            _drawerImages.DrawBinaryPoint(299, Color.YellowGreen);
+            _drawerImages.DrawBinaryPoint(280, Color.YellowGreen);
+            _drawerImages.DrawBinaryPoint(9, Color.YellowGreen);
+            _drawerImages.DrawBinaryPoint(589, Color.YellowGreen);
+            _drawerImages.DrawBinaryPoint(600, Color.YellowGreen);
+
+
+
+            return;
+            string[] testTypes = _collectionAvalaibleImages.GetTypes(30, 20);
+            int count = 0;
+            ImBinary currIm;
+            foreach (string type in testTypes)
+                for (uint i = 0; i < 74; i++)
+                {
+                    currIm = _collectionAvalaibleImages.GetNoiseImage(30, 20, type, i);
+                    count += (currIm.Type == _currClassificator.Classificate(currIm)) ? 1 : 0;
+                }
+            cmB_Dimensionalitys.Items.Add(((double)count) / 592);
+
+            //{
+            //    List<ImBinary> allIm = _collectionAvalaibleImages.GetImBinarys(30, 20);
+            //    int count = 0;
+            //    for (int i = 0, n = allIm.Count; i < n; i++)
+            //        count += (allIm[i].Type == _classificator.Classificate(allIm[i])) ? 1 : 0;
+            //    comboBox1.Items.Add(((double)count) / allIm.Count);
+            //}
+            //ImBinary currIm = null;
+            //string[] parse = dUD_ListImage.SelectedItem.ToString().Split(new char[2] { 'x', '_' }, 4);
+
+            //byte row_cou = Convert.ToByte(parse[1]),
+            //     col_cou = Convert.ToByte(parse[2]);
+            //string typeModel = parse[3];
+            //switch (parse[0][0])
+            //{
+            //    case MARK_MODEL:
+            //        currIm = _collectionAvalaibleImages.GetModel(row_cou, col_cou, typeModel);
+            //        break;
+            //    case MARK_NOISE_IMAGE:
+            //        uint numNoiseImage = Convert.ToUInt32(parse[0].Substring(1));
+            //        currIm = _collectionAvalaibleImages.GetNoiseImage(row_cou, col_cou, typeModel, numNoiseImage);
+            //        break;
+            //    default:
+            //        break;
+            //}
+            //comboBox1.Items.Add(_classificator.Classificate(currIm));
+            return;
+            _currClassificator = DecisionTreeForImBinary.CreateInstance(_collectionAvalaibleImages.GetImBinarys(30, 20).ToArray());
+            uint[] t = _currClassificator.NumbersImportantProps;
+            foreach (uint p in t) 
+                cmB_Dimensionalitys.Items.Add(p);
+        }
+
+        private void cLB_ListAvalaibleImages_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _oldSelectIndex = dUD_ListImage.SelectedIndex = cLB_ListAvalaibleImages.SelectedIndex;
+        }
+
+        private void txB_NumChooseIm_Validated(object sender, EventArgs e)
+        {
+            int number;
+            if(int.TryParse(txB_NumChooseIm.Text, out number))
+                if ((number > 0) && (number <= dUD_ListImage.Items.Count))                
+                    dUD_ListImage.SelectedIndex = number - 1;
+
+            txB_NumChooseIm.Text = dUD_ListImage.SelectedIndex + 1 + "/" + dUD_ListImage.Items.Count;                
+        }
+
+        private void txB_NumChooseIm_Enter(object sender, EventArgs e)
+        {
+            txB_NumChooseIm.Text = "";
+        }
+
+        private void txB_NumChooseIm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                dUD_ListImage.Focus();
+                txB_NumChooseIm.Focus();
+            }
+        }
+
+        private void chB_CheckAll_CheckedChanged(object sender, EventArgs e)
+        {
+            bool state = chB_CheckAll.Checked;
+            for (int i = 0, n = cLB_ListAvalaibleImages.Items.Count; i < n; i++)
+                cLB_ListAvalaibleImages.SetItemChecked(i, state);
+        }
+
+        private void cLB_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (((sender as CheckedListBox).Items.Count > 0) && (e.Button == System.Windows.Forms.MouseButtons.Left))
+                if (_multiSelect)
+                {
+                    int endSelect = (sender as CheckedListBox).IndexFromPoint(e.Location),
+                        begSelect;
+                    if (_oldSelectIndex > endSelect)
+                    {
+                        begSelect = endSelect;
+                        endSelect = _oldSelectIndex;
+                    }
+                    else
+                        begSelect = _oldSelectIndex;
+                    for (int i = begSelect; i < endSelect; i++)
+                        (sender as CheckedListBox).SetItemChecked(i, true);
+                    _oldSelectIndex = endSelect;
+                }
+        }
+
+        private void cLB_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.ShiftKey)
+                _multiSelect = true;
+        }
+
+        private void cLB_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.ShiftKey)
+                _multiSelect = false;
+        }
+
+        private void tbP_SelectLearnDataAndAddClassificator_Enter(object sender, EventArgs e)
+        {
+            cmB_Dimensionalitys.Items.Clear();
+            cmB_Dimensionalitys.Items.AddRange(_collectionAvalaibleImages.Dimensions);
+            if(cmB_Dimensionalitys.Items.Count > 0)
+                cmB_Dimensionalitys.SelectedIndex = 0;
+        }
+
+        private void cLB_LearnImages_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _drawerLearnIm.DrawIm((ImBinary)cLB_LearnImages.Items[cLB_LearnImages.SelectedIndex]);
+            if (_currClassificator != null)
+            {
+                _drawerLearnIm.DrawBinaryPoints(_currClassificator.NumbersImportantProps, _colorSelectionImpProp);
+            }
+            _oldSelectIndex = cLB_LearnImages.SelectedIndex;
+        }
+
+        private void cmB_Dimensionalitys_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmB_Dimensionalitys.Items.Count > 0)
+            {
+                string[] dim = cmB_Dimensionalitys.SelectedItem.ToString().Split('x');
+                cLB_LearnImages.Items.Clear();
+                cLB_LearnImages.Items.AddRange(_collectionAvalaibleImages.GetImBinarys(Convert.ToByte(dim[0]), Convert.ToByte(dim[1])).ToArray<ImBinary>());
+                cLB_LearnImages.SelectedIndex = 0;
+            }
+        }
+
+        private void btnCreateClassificator_Click(object sender, EventArgs e)
+        {
+            if (cLB_LearnImages.CheckedItems.Count > 0)
+            {
+                ImBinary[] selectLearnImages = new ImBinary[cLB_LearnImages.CheckedItems.Count];
+                cLB_LearnImages.CheckedItems.CopyTo(selectLearnImages, 0);
+                _classificators.Add(_currClassificator = DecisionTreeForImBinary.CreateInstance(selectLearnImages, DecisionTreeForImBinary.MethodBuild.CART));
+                lblStatusCreateClassificator.ForeColor = Color.LimeGreen;
+                lblStatusCreateClassificator.Text = _classificators.Count + "-й класифікатор успішно створено.";                
+
+            }
+            else
+            {
+                lblStatusCreateClassificator.ForeColor = Color.OrangeRed;
+                lblStatusCreateClassificator.Text = "Оберіть образи зі списку вище!";                
+            }
+        }
     }
 }

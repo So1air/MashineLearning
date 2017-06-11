@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassificatorForImBinary.cs" />
     <Compile Include="CollectionOfImBinary.cs" />
     <Compile Include="DrawerImBinary.cs" />
     <Compile Include="frmMashineLearning.cs">
@@ -53,8 +54,10 @@
       <DependentUpon>frmMashineLearning.cs</DependentUpon>
     </Compile>
     <Compile Include="ImBinary.cs" />
+    <Compile Include="LearnSetOfImBinarys.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DecisionTreeForImBinary.cs" />
     <EmbeddedResource Include="frmMashineLearning.resx">
       <DependentUpon>frmMashineLearning.cs</DependentUpon>
     </EmbeddedResource>

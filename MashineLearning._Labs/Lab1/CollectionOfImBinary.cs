@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MashineLearning.Classification
 {
@@ -26,172 +24,7 @@ namespace MashineLearning.Classification
         public uint Size
         {
             get { return _size; }
-        }
-
-        #region устарело
-        //private List<ModelImWithNoiseIm_s> _listGroupOfImages = new List<ModelImWithNoiseIm_s>();
-
-        //public bool RemoveImBinary(uint ind_removeIm)
-        //{
-        //    if (ind_removeIm < _size)
-        //    {
-        //        int ind = Convert.ToInt32(ind_removeIm);
-        //        for (int i = 0; i < _listGroupOfImages.Count; i++)
-        //        {
-        //            if (_listGroupOfImages[i].M != null)
-        //            {
-        //                ind--;
-        //                if (ind == -1)
-        //                {
-        //                    _listGroupOfImages[i].M = null;
-        //                    _size--;
-        //                    return true;
-        //                }
-        //            }
-
-        //            for (int j = 0; j < _listGroupOfImages[i].N.Count; j++)
-        //            {
-        //                ind--;
-        //                if (ind == -1)
-        //                {
-        //                    _listGroupOfImages[i].N.RemoveAt(j);
-        //                    _size--;
-        //                    return true;
-        //                }
-        //            }
-        //        }
-        //    }
-             
-        //    return false;
-        //}
-
-        //public int AddModel(string type, ImBinary im)
-        //{
-        //    if ((type != null) && (type.Length != 0) && (im != null))
-        //    {
-        //        if (im.Type == null)
-        //            im.Type = type;
-
-        //        if (im.Type != type)
-        //            return -1;
-        //        else
-        //        {
-        //            if (FindNameModel(type) == -1)
-        //            {
-        //                int check_type = FindType(type);
-        //                if (check_type != -1)
-        //                {
-        //                    _listGroupOfImages[check_type].M = im;
-        //                    _size++;
-        //                    int res = 0;
-        //                    for (int i = 0; i < check_type; i++)
-        //                    {
-        //                        if (_listGroupOfImages[i].M != null)
-        //                            res++;
-        //                        res += _listGroupOfImages[i].N.Count;
-        //                    }
-        //                    return res;
-        //                }
-        //                else
-        //                {
-        //                    _listGroupOfImages.Add(new ModelImWithNoiseIm_s() { M = im });
-        //                    _size++;
-        //                    return (int)(_size - 1);
-        //                }
-        //            }
-        //            else return -1;
-        //        }
-        //    }
-        //    else return -1;
-        //}
-
-        //public ImBinary GetModel(string type)
-        //{
-        //    int index_search_model = FindNameModel(type);
-        //    if (index_search_model != -1)
-        //        return _listGroupOfImages[index_search_model].M;
-        //    else return null;
-        //}
-
-        //public int AddNoiseImage(string type, ImBinary im_noise)
-        //{
-        //    if ((type != null) && (type.Length != 0) && (im_noise != null))
-        //    {
-        //        if (im_noise.Type == null)
-        //            im_noise.Type = type;
-
-        //        if (im_noise.Type != type)
-        //            return -1;
-        //        else
-        //        {
-        //            int return_index = 0;
-        //            for (int i = 0; i < _listGroupOfImages.Count; i++)
-        //            {
-        //                if (_listGroupOfImages[i].M != null)
-        //                {
-        //                    return_index += _listGroupOfImages[i].N.Count + 1;
-        //                    if (_listGroupOfImages[i].M.Type.ToString() == type.ToString())
-        //                    {
-        //                        _listGroupOfImages[i].N.Add(im_noise);
-        //                        _size++;
-        //                        return return_index;
-        //                    }
-        //                }
-        //                else
-        //                {
-        //                    return_index += _listGroupOfImages[i].N.Count;
-        //                    if (_listGroupOfImages[i].N[0].Type.ToString() == type.ToString())
-        //                    {
-        //                        _listGroupOfImages[i].N.Add(im_noise);
-        //                        _size++;
-        //                        return return_index;
-        //                    }
-        //                }
-        //            }
-
-        //            return -1;
-        //        }
-        //    }
-        //    else return -1;
-        //}
-
-        //public int FindNameModel(string type)
-        //{
-        //    if ((type != null) && (type.Length != 0))            
-        //        for(int i = 0; i < _listGroupOfImages.Count; i++)
-        //            if (_listGroupOfImages[i].M != null)
-        //                if (_listGroupOfImages[i].M.Type.ToString() == type)
-        //                    return i;
-
-        //    return -1;
-        //}
-
-        //private int FindType(string type)
-        //{
-        //    if ((type != null) && (type.Length != 0))
-        //        for (int i = 0; i < _listGroupOfImages.Count; i++)
-        //            if (_listGroupOfImages[i].M != null)
-        //            {
-        //                if (_listGroupOfImages[i].M.Type.ToString() == type.ToString())
-        //                    return i;
-        //            }
-        //            else 
-        //                if (_listGroupOfImages[i].N[0].Type.ToString() == type.ToString())
-        //                    return i;
-
-        //    return -1;
-        //}
-
-        //public List<ImBinary> GetModels()
-        //{
-        //    List<ImBinary> result = new List<ImBinary>();
-        //    for (int i = 0; i < _listGroupOfImages.Count; i++)
-        //        if (_listGroupOfImages[i].M != null)
-        //            result.Add(_listGroupOfImages[i].M);
-
-        //    return result;
-        //}
-        #endregion
+        }        
         /*         
          возврат коллекций:
          * List<ImBinary> Вернуть весь список();                                                                                     +
@@ -415,27 +248,6 @@ namespace MashineLearning.Classification
         { 
             int index_search_im = -1;
 
-            #region варіант з List
-            //for (int i = 0; i < _listGroupOfImages.Count; i++)
-            //{
-            //    if (_listGroupOfImages[i].M != null)
-            //    {
-            //        index_search_im++;
-            //        if (index_search_im == index_im)
-            //            return _listGroupOfImages[i].M;
-            //    }
-
-            //    if (_listGroupOfImages[i].N != null)
-            //        for (int j = 0; j < _listGroupOfImages[i].N.Count; j++)
-            //        {
-            //            index_search_im++;
-            //            if (index_search_im == index_im)
-            //                return _listGroupOfImages[i].N[j];
-            //        }
-            //}
-            #endregion
-
-            #region варіант з Dictionary
             Dictionary<string, Dictionary<string, ModelImWithNoiseIm_s>>.ValueCollection general_sets_of_same_dimensions = _datafetchesImages.Values;
             Dictionary<string, ModelImWithNoiseIm_s>.ValueCollection sets_of_images_of_same_type;
             foreach (Dictionary<string, ModelImWithNoiseIm_s> gen_set in general_sets_of_same_dimensions)
@@ -458,7 +270,6 @@ namespace MashineLearning.Classification
                     }
                 }
             }
-            #endregion
 
             return null;
         }        
@@ -485,18 +296,9 @@ namespace MashineLearning.Classification
             }
 
             return null;
-
-            //try
-            //{
-            //    return _datafetchesImages[rc.ToString() + "x" + cc.ToString()][type].N[(int)index];
-            //}
-            //catch (Exception)
-            //{
-            //    return null;
-            //}
         }
 
-        public bool AddModel(ImBinary model)                                         //обсудить с преподавателем
+        public bool AddModel(ImBinary model)                                         
         {
             if (model.Type != null)
             {
@@ -505,9 +307,6 @@ namespace MashineLearning.Classification
                     if (_datafetchesImages[dimensionality].ContainsKey(model.Type))
                         if (_datafetchesImages[dimensionality][model.Type].M == null)
                         {
-                            //возможно следует сделать проверку на сходство с зашумлёнными            +                            
-                            //или поступить радикально и удалить все зашумлённые экземпляры
-                            //или сделать попроще: вернуть false
                             bool prevent = true;
                             int i = -1;
                             List<ImBinary> noiseImages = _datafetchesImages[dimensionality][model.Type].N;
@@ -535,7 +334,7 @@ namespace MashineLearning.Classification
             return true;
         }
 
-        public int AddNoiseImage(ImBinary noise_image)                              //обсудить с преподавателем
+        public int AddNoiseImage(ImBinary noise_image)                              
         {
             int result;
             if (noise_image.Type != null)
@@ -545,7 +344,6 @@ namespace MashineLearning.Classification
                     if (_datafetchesImages[dimensionality].ContainsKey(noise_image.Type))
                         if (_datafetchesImages[dimensionality][noise_image.Type].M != null)
                         {
-                            //возможно следует сделать проверку на сходство с эталоном   +
                             if (PrimitiveCheckOnConformity(noise_image, _datafetchesImages[dimensionality][noise_image.Type].M))
                             {
                                 _datafetchesImages[dimensionality][noise_image.Type].N.Add(noise_image);

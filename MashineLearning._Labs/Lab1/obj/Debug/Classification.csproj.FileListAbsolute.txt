@@ -10,3 +10,9 @@ F:\УЧЁБА\ДНУ ФПМ\ПМ-14-.. 3 курс\VІ семестр\Метод�
 E:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\bin\Debug\Lab1.exe.config
 E:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\Lab1.exe
 E:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\Lab1.pdb
+E:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\Classification.csprojResolveAssemblyReference.cache
+E:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\MashineLearning.Classification.frmMashineLearning.resources
+E:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\MashineLearning.Classification.Properties.Resources.resources
+E:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\Classification.csproj.GenerateResource.Cache
+E:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\bin\Debug\Lab1.exe
+E:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\bin\Debug\Lab1.pdb
