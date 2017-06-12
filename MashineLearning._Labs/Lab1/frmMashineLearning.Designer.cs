@@ -66,7 +66,26 @@
             this.dUD_ListImage = new System.Windows.Forms.DomainUpDown();
             this.pcB_Image = new System.Windows.Forms.PictureBox();
             this.tbP_SelectLearnDataAndAddClassificator = new System.Windows.Forms.TabPage();
+            this.grB_EstimationQualityClassication = new System.Windows.Forms.GroupBox();
+            this.dGV_ResultCrossValidation = new System.Windows.Forms.DataGridView();
+            this.colDGV_Iteration = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.сolDGV_PercentCorrectClassific = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txB_CountParts = new System.Windows.Forms.TextBox();
+            this.lblCountParts = new System.Windows.Forms.Label();
+            this.grB_SettingOfProportion = new System.Windows.Forms.GroupBox();
+            this.lblPercentPartition = new System.Windows.Forms.Label();
+            this.lblCountIteration = new System.Windows.Forms.Label();
+            this.txB_PercentPartition = new System.Windows.Forms.TextBox();
+            this.nUD_CountIteration = new System.Windows.Forms.NumericUpDown();
+            this.grB_TypePartition = new System.Windows.Forms.GroupBox();
+            this.rdB_SpecifiedNumber_ofParts = new System.Windows.Forms.RadioButton();
+            this.rdB_SpecifiedProportion = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
             this.grB_CreateClassificator = new System.Windows.Forms.GroupBox();
+            this.lblCountCheckedImsForLearning = new System.Windows.Forms.Label();
+            this.grB_UsingLearnData = new System.Windows.Forms.GroupBox();
+            this.rdB_CrossValidation = new System.Windows.Forms.RadioButton();
+            this.rdB_AllLearnData = new System.Windows.Forms.RadioButton();
             this.pcB_DemoLearnIm = new System.Windows.Forms.PictureBox();
             this.lblStatusCreateClassificator = new System.Windows.Forms.Label();
             this.btnCreateClassificator = new System.Windows.Forms.Button();
@@ -89,7 +108,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.nUD_CountNoisy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcB_Image)).BeginInit();
             this.tbP_SelectLearnDataAndAddClassificator.SuspendLayout();
+            this.grB_EstimationQualityClassication.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dGV_ResultCrossValidation)).BeginInit();
+            this.grB_SettingOfProportion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nUD_CountIteration)).BeginInit();
+            this.grB_TypePartition.SuspendLayout();
             this.grB_CreateClassificator.SuspendLayout();
+            this.grB_UsingLearnData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcB_DemoLearnIm)).BeginInit();
             this.SuspendLayout();
             // 
@@ -581,6 +606,8 @@
             // 
             // tbP_SelectLearnDataAndAddClassificator
             // 
+            this.tbP_SelectLearnDataAndAddClassificator.Controls.Add(this.grB_EstimationQualityClassication);
+            this.tbP_SelectLearnDataAndAddClassificator.Controls.Add(this.button1);
             this.tbP_SelectLearnDataAndAddClassificator.Controls.Add(this.grB_CreateClassificator);
             this.tbP_SelectLearnDataAndAddClassificator.Location = new System.Drawing.Point(4, 22);
             this.tbP_SelectLearnDataAndAddClassificator.Name = "tbP_SelectLearnDataAndAddClassificator";
@@ -591,8 +618,200 @@
             this.tbP_SelectLearnDataAndAddClassificator.UseVisualStyleBackColor = true;
             this.tbP_SelectLearnDataAndAddClassificator.Enter += new System.EventHandler(this.tbP_SelectLearnDataAndAddClassificator_Enter);
             // 
+            // grB_EstimationQualityClassication
+            // 
+            this.grB_EstimationQualityClassication.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grB_EstimationQualityClassication.Controls.Add(this.dGV_ResultCrossValidation);
+            this.grB_EstimationQualityClassication.Controls.Add(this.txB_CountParts);
+            this.grB_EstimationQualityClassication.Controls.Add(this.lblCountParts);
+            this.grB_EstimationQualityClassication.Controls.Add(this.grB_SettingOfProportion);
+            this.grB_EstimationQualityClassication.Controls.Add(this.grB_TypePartition);
+            this.grB_EstimationQualityClassication.Location = new System.Drawing.Point(735, 6);
+            this.grB_EstimationQualityClassication.Name = "grB_EstimationQualityClassication";
+            this.grB_EstimationQualityClassication.Size = new System.Drawing.Size(269, 472);
+            this.grB_EstimationQualityClassication.TabIndex = 2;
+            this.grB_EstimationQualityClassication.TabStop = false;
+            this.grB_EstimationQualityClassication.Text = "Оцінка якості класифікації(результати CV)";
+            this.grB_EstimationQualityClassication.Visible = false;
+            // 
+            // dGV_ResultCrossValidation
+            // 
+            this.dGV_ResultCrossValidation.AllowUserToAddRows = false;
+            this.dGV_ResultCrossValidation.AllowUserToDeleteRows = false;
+            this.dGV_ResultCrossValidation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dGV_ResultCrossValidation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dGV_ResultCrossValidation.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dGV_ResultCrossValidation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGV_ResultCrossValidation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colDGV_Iteration,
+            this.сolDGV_PercentCorrectClassific});
+            this.dGV_ResultCrossValidation.GridColor = System.Drawing.SystemColors.ControlLight;
+            this.dGV_ResultCrossValidation.Location = new System.Drawing.Point(6, 206);
+            this.dGV_ResultCrossValidation.Name = "dGV_ResultCrossValidation";
+            this.dGV_ResultCrossValidation.ReadOnly = true;
+            this.dGV_ResultCrossValidation.RowHeadersVisible = false;
+            this.dGV_ResultCrossValidation.Size = new System.Drawing.Size(257, 226);
+            this.dGV_ResultCrossValidation.TabIndex = 8;
+            // 
+            // colDGV_Iteration
+            // 
+            this.colDGV_Iteration.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colDGV_Iteration.FillWeight = 50F;
+            this.colDGV_Iteration.HeaderText = "Ітерація";
+            this.colDGV_Iteration.Name = "colDGV_Iteration";
+            this.colDGV_Iteration.ReadOnly = true;
+            this.colDGV_Iteration.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // сolDGV_PercentCorrectClassific
+            // 
+            this.сolDGV_PercentCorrectClassific.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.сolDGV_PercentCorrectClassific.HeaderText = "Відсоток правильно класифікованих";
+            this.сolDGV_PercentCorrectClassific.Name = "сolDGV_PercentCorrectClassific";
+            this.сolDGV_PercentCorrectClassific.ReadOnly = true;
+            this.сolDGV_PercentCorrectClassific.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // txB_CountParts
+            // 
+            this.txB_CountParts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txB_CountParts.Location = new System.Drawing.Point(133, 129);
+            this.txB_CountParts.Name = "txB_CountParts";
+            this.txB_CountParts.Size = new System.Drawing.Size(100, 20);
+            this.txB_CountParts.TabIndex = 6;
+            this.txB_CountParts.Text = "3";
+            this.txB_CountParts.Visible = false;
+            this.txB_CountParts.WordWrap = false;
+            this.txB_CountParts.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txB_CountParts_KeyDown);
+            this.txB_CountParts.Validated += new System.EventHandler(this.txB_CountParts_Validated);
+            // 
+            // lblCountParts
+            // 
+            this.lblCountParts.AutoSize = true;
+            this.lblCountParts.Location = new System.Drawing.Point(9, 132);
+            this.lblCountParts.Name = "lblCountParts";
+            this.lblCountParts.Size = new System.Drawing.Size(93, 13);
+            this.lblCountParts.TabIndex = 7;
+            this.lblCountParts.Text = "Кількість частин:";
+            this.lblCountParts.Visible = false;
+            // 
+            // grB_SettingOfProportion
+            // 
+            this.grB_SettingOfProportion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grB_SettingOfProportion.Controls.Add(this.lblPercentPartition);
+            this.grB_SettingOfProportion.Controls.Add(this.lblCountIteration);
+            this.grB_SettingOfProportion.Controls.Add(this.txB_PercentPartition);
+            this.grB_SettingOfProportion.Controls.Add(this.nUD_CountIteration);
+            this.grB_SettingOfProportion.Location = new System.Drawing.Point(6, 106);
+            this.grB_SettingOfProportion.Name = "grB_SettingOfProportion";
+            this.grB_SettingOfProportion.Size = new System.Drawing.Size(257, 83);
+            this.grB_SettingOfProportion.TabIndex = 5;
+            this.grB_SettingOfProportion.TabStop = false;
+            this.grB_SettingOfProportion.Text = "Налаштування пропорційного розбиття";
+            // 
+            // lblPercentPartition
+            // 
+            this.lblPercentPartition.AutoSize = true;
+            this.lblPercentPartition.Location = new System.Drawing.Point(6, 26);
+            this.lblPercentPartition.Name = "lblPercentPartition";
+            this.lblPercentPartition.Size = new System.Drawing.Size(130, 13);
+            this.lblPercentPartition.TabIndex = 2;
+            this.lblPercentPartition.Text = "Доля навчальних даних:";
+            // 
+            // lblCountIteration
+            // 
+            this.lblCountIteration.AutoSize = true;
+            this.lblCountIteration.Location = new System.Drawing.Point(6, 51);
+            this.lblCountIteration.Name = "lblCountIteration";
+            this.lblCountIteration.Size = new System.Drawing.Size(112, 13);
+            this.lblCountIteration.TabIndex = 4;
+            this.lblCountIteration.Text = "Кількість повторень:";
+            // 
+            // txB_PercentPartition
+            // 
+            this.txB_PercentPartition.Location = new System.Drawing.Point(158, 23);
+            this.txB_PercentPartition.Name = "txB_PercentPartition";
+            this.txB_PercentPartition.Size = new System.Drawing.Size(93, 20);
+            this.txB_PercentPartition.TabIndex = 1;
+            this.txB_PercentPartition.Text = "0,75";
+            this.txB_PercentPartition.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txB_PercentPartition_KeyDown);
+            this.txB_PercentPartition.Validated += new System.EventHandler(this.txB_PercentPartition_Validated);
+            // 
+            // nUD_CountIteration
+            // 
+            this.nUD_CountIteration.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.nUD_CountIteration.Location = new System.Drawing.Point(127, 49);
+            this.nUD_CountIteration.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nUD_CountIteration.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nUD_CountIteration.Name = "nUD_CountIteration";
+            this.nUD_CountIteration.Size = new System.Drawing.Size(93, 20);
+            this.nUD_CountIteration.TabIndex = 3;
+            this.nUD_CountIteration.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // grB_TypePartition
+            // 
+            this.grB_TypePartition.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grB_TypePartition.Controls.Add(this.rdB_SpecifiedNumber_ofParts);
+            this.grB_TypePartition.Controls.Add(this.rdB_SpecifiedProportion);
+            this.grB_TypePartition.Location = new System.Drawing.Point(6, 22);
+            this.grB_TypePartition.Name = "grB_TypePartition";
+            this.grB_TypePartition.Size = new System.Drawing.Size(257, 78);
+            this.grB_TypePartition.TabIndex = 0;
+            this.grB_TypePartition.TabStop = false;
+            this.grB_TypePartition.Text = "Тип розбиття";
+            // 
+            // rdB_SpecifiedNumber_ofParts
+            // 
+            this.rdB_SpecifiedNumber_ofParts.AutoSize = true;
+            this.rdB_SpecifiedNumber_ofParts.Location = new System.Drawing.Point(6, 43);
+            this.rdB_SpecifiedNumber_ofParts.Name = "rdB_SpecifiedNumber_ofParts";
+            this.rdB_SpecifiedNumber_ofParts.Size = new System.Drawing.Size(146, 17);
+            this.rdB_SpecifiedNumber_ofParts.TabIndex = 1;
+            this.rdB_SpecifiedNumber_ofParts.Text = "задана кількість частин";
+            this.rdB_SpecifiedNumber_ofParts.UseVisualStyleBackColor = true;
+            // 
+            // rdB_SpecifiedProportion
+            // 
+            this.rdB_SpecifiedProportion.AutoSize = true;
+            this.rdB_SpecifiedProportion.Checked = true;
+            this.rdB_SpecifiedProportion.Location = new System.Drawing.Point(6, 20);
+            this.rdB_SpecifiedProportion.Name = "rdB_SpecifiedProportion";
+            this.rdB_SpecifiedProportion.Size = new System.Drawing.Size(178, 17);
+            this.rdB_SpecifiedProportion.TabIndex = 0;
+            this.rdB_SpecifiedProportion.TabStop = true;
+            this.rdB_SpecifiedProportion.Text = "випадково у заданій пропорції";
+            this.rdB_SpecifiedProportion.UseVisualStyleBackColor = true;
+            this.rdB_SpecifiedProportion.CheckedChanged += new System.EventHandler(this.rdB_SpecifiedProportion_CheckedChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(929, 484);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // grB_CreateClassificator
             // 
+            this.grB_CreateClassificator.Controls.Add(this.lblCountCheckedImsForLearning);
+            this.grB_CreateClassificator.Controls.Add(this.grB_UsingLearnData);
             this.grB_CreateClassificator.Controls.Add(this.pcB_DemoLearnIm);
             this.grB_CreateClassificator.Controls.Add(this.lblStatusCreateClassificator);
             this.grB_CreateClassificator.Controls.Add(this.btnCreateClassificator);
@@ -605,6 +824,51 @@
             this.grB_CreateClassificator.TabIndex = 0;
             this.grB_CreateClassificator.TabStop = false;
             this.grB_CreateClassificator.Text = "Створення класифікатора";
+            // 
+            // lblCountCheckedImsForLearning
+            // 
+            this.lblCountCheckedImsForLearning.AutoSize = true;
+            this.lblCountCheckedImsForLearning.Location = new System.Drawing.Point(3, 342);
+            this.lblCountCheckedImsForLearning.Name = "lblCountCheckedImsForLearning";
+            this.lblCountCheckedImsForLearning.Size = new System.Drawing.Size(103, 13);
+            this.lblCountCheckedImsForLearning.TabIndex = 8;
+            this.lblCountCheckedImsForLearning.Text = "count_checked_ims";
+            // 
+            // grB_UsingLearnData
+            // 
+            this.grB_UsingLearnData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grB_UsingLearnData.Controls.Add(this.rdB_CrossValidation);
+            this.grB_UsingLearnData.Controls.Add(this.rdB_AllLearnData);
+            this.grB_UsingLearnData.Location = new System.Drawing.Point(9, 371);
+            this.grB_UsingLearnData.Name = "grB_UsingLearnData";
+            this.grB_UsingLearnData.Size = new System.Drawing.Size(200, 79);
+            this.grB_UsingLearnData.TabIndex = 7;
+            this.grB_UsingLearnData.TabStop = false;
+            this.grB_UsingLearnData.Text = "Використання навчальних даних";
+            // 
+            // rdB_CrossValidation
+            // 
+            this.rdB_CrossValidation.AutoSize = true;
+            this.rdB_CrossValidation.Location = new System.Drawing.Point(6, 45);
+            this.rdB_CrossValidation.Name = "rdB_CrossValidation";
+            this.rdB_CrossValidation.Size = new System.Drawing.Size(120, 17);
+            this.rdB_CrossValidation.TabIndex = 1;
+            this.rdB_CrossValidation.Text = "Cross Validation(CV)";
+            this.rdB_CrossValidation.UseVisualStyleBackColor = true;
+            this.rdB_CrossValidation.CheckedChanged += new System.EventHandler(this.rdB_CrossValidation_CheckedChanged);
+            // 
+            // rdB_AllLearnData
+            // 
+            this.rdB_AllLearnData.AutoSize = true;
+            this.rdB_AllLearnData.Checked = true;
+            this.rdB_AllLearnData.Location = new System.Drawing.Point(6, 22);
+            this.rdB_AllLearnData.Name = "rdB_AllLearnData";
+            this.rdB_AllLearnData.Size = new System.Drawing.Size(85, 17);
+            this.rdB_AllLearnData.TabIndex = 0;
+            this.rdB_AllLearnData.TabStop = true;
+            this.rdB_AllLearnData.Text = "Вся вибірка";
+            this.rdB_AllLearnData.UseVisualStyleBackColor = true;
             // 
             // pcB_DemoLearnIm
             // 
@@ -634,7 +898,7 @@
             // 
             this.btnCreateClassificator.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCreateClassificator.Location = new System.Drawing.Point(6, 453);
+            this.btnCreateClassificator.Location = new System.Drawing.Point(6, 456);
             this.btnCreateClassificator.Name = "btnCreateClassificator";
             this.btnCreateClassificator.Size = new System.Drawing.Size(203, 23);
             this.btnCreateClassificator.TabIndex = 4;
@@ -651,8 +915,9 @@
             this.cLB_LearnImages.FormattingEnabled = true;
             this.cLB_LearnImages.Location = new System.Drawing.Point(6, 65);
             this.cLB_LearnImages.Name = "cLB_LearnImages";
-            this.cLB_LearnImages.Size = new System.Drawing.Size(203, 364);
+            this.cLB_LearnImages.Size = new System.Drawing.Size(203, 274);
             this.cLB_LearnImages.TabIndex = 3;
+            this.cLB_LearnImages.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cLB_LearnImages_ItemCheck);
             this.cLB_LearnImages.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cLB_MouseClick);
             this.cLB_LearnImages.SelectedIndexChanged += new System.EventHandler(this.cLB_LearnImages_SelectedIndexChanged);
             this.cLB_LearnImages.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cLB_KeyDown);
@@ -745,8 +1010,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.nUD_CountNoisy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcB_Image)).EndInit();
             this.tbP_SelectLearnDataAndAddClassificator.ResumeLayout(false);
+            this.grB_EstimationQualityClassication.ResumeLayout(false);
+            this.grB_EstimationQualityClassication.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dGV_ResultCrossValidation)).EndInit();
+            this.grB_SettingOfProportion.ResumeLayout(false);
+            this.grB_SettingOfProportion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nUD_CountIteration)).EndInit();
+            this.grB_TypePartition.ResumeLayout(false);
+            this.grB_TypePartition.PerformLayout();
             this.grB_CreateClassificator.ResumeLayout(false);
             this.grB_CreateClassificator.PerformLayout();
+            this.grB_UsingLearnData.ResumeLayout(false);
+            this.grB_UsingLearnData.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcB_DemoLearnIm)).EndInit();
             this.ResumeLayout(false);
 
@@ -804,6 +1079,25 @@
         private System.Windows.Forms.Label lblStatusCreateClassificator;
         private System.Windows.Forms.Button btnCreateClassificator;
         private System.Windows.Forms.PictureBox pcB_DemoLearnIm;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox grB_UsingLearnData;
+        private System.Windows.Forms.GroupBox grB_EstimationQualityClassication;
+        private System.Windows.Forms.DataGridView dGV_ResultCrossValidation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDGV_Iteration;
+        private System.Windows.Forms.DataGridViewTextBoxColumn сolDGV_PercentCorrectClassific;
+        private System.Windows.Forms.Label lblCountParts;
+        private System.Windows.Forms.GroupBox grB_SettingOfProportion;
+        private System.Windows.Forms.Label lblPercentPartition;
+        private System.Windows.Forms.TextBox txB_CountParts;
+        private System.Windows.Forms.Label lblCountIteration;
+        private System.Windows.Forms.TextBox txB_PercentPartition;
+        private System.Windows.Forms.NumericUpDown nUD_CountIteration;
+        private System.Windows.Forms.GroupBox grB_TypePartition;
+        private System.Windows.Forms.RadioButton rdB_SpecifiedNumber_ofParts;
+        private System.Windows.Forms.RadioButton rdB_SpecifiedProportion;
+        private System.Windows.Forms.RadioButton rdB_CrossValidation;
+        private System.Windows.Forms.RadioButton rdB_AllLearnData;
+        private System.Windows.Forms.Label lblCountCheckedImsForLearning;
     }
 }
 

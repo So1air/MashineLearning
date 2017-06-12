@@ -87,15 +87,20 @@ namespace MashineLearning.Classification
             return result;
         }
 
-        public override string ToString()
+        public string ToStringData()
         {
             string result = "";
             for (int i = 0; i < _properties.Length; i++)
                 result += _properties[i].ToString();
             if (this.Type != null)
                 result += " " + this.Type;
-
+            
             return result;
+        }
+
+        public override string ToString()
+        {
+            return (this._row_count + "x" + this._col_count + " - " + this._type);
         }
 
         public ImBinary(byte rc, byte cc)
