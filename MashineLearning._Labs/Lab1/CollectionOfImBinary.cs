@@ -17,7 +17,6 @@ namespace MashineLearning.Classification
             public List<ImBinary> N = new List<ImBinary>();
         }
 
-
         private Dictionary<string, Dictionary<string, ModelImWithNoiseIm_s>> _datafetchesImages = new Dictionary<string,Dictionary<string, ModelImWithNoiseIm_s>>();
         private uint _size = 0;
 
@@ -71,18 +70,6 @@ namespace MashineLearning.Classification
         {
             List<ImBinary> result = new List<ImBinary>();
 
-            #region варіант з List
-            //for (int i = 0; i < _listGroupOfImages.Count; i++)
-            //{
-            //    if (_listGroupOfImages[i].M != null)
-            //        result.Add(_listGroupOfImages[i].M);
-            //    if (_listGroupOfImages[i].N != null)
-            //        for (int j = 0; j < _listGroupOfImages[i].N.Count; j++)
-            //            result.Add(_listGroupOfImages[i].N[j]);
-            //}
-            #endregion
-
-            /*варіант з Dictionary*/
             Dictionary<string, Dictionary<string, ModelImWithNoiseIm_s>>.ValueCollection general_sets_of_same_dimensions = _datafetchesImages.Values;
             Dictionary<string, ModelImWithNoiseIm_s>.ValueCollection sets_of_images_of_same_type;
             foreach (Dictionary<string, ModelImWithNoiseIm_s> gset in general_sets_of_same_dimensions)
@@ -96,7 +83,6 @@ namespace MashineLearning.Classification
                     result.AddRange(set.N);
                 }
             }
-            /*                                    */
 
             return result;   
         }

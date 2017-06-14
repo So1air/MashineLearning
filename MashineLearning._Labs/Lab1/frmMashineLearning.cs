@@ -28,6 +28,7 @@ namespace MashineLearning.Classification
         List<DecisionTreeForImBinary> _classificators = new List<DecisionTreeForImBinary>();
         DrawerImBinary _drawerLearnIm;
         Color _colorSelectionImpProp = Color.Yellow;
+        DecisionTreeForImBinary.MethodBuild _critSelectProp = DecisionTreeForImBinary.MethodBuild.CART;
         //lab3
         int _oldCountParts;
         double _oldPercentPart;
@@ -44,7 +45,6 @@ namespace MashineLearning.Classification
             lblCountCheckedImsForLearning.Text = "";
             _oldCountParts = int.Parse(txB_CountParts.Text);
             _oldPercentPart = double.Parse(txB_PercentPartition.Text);
-
         }    
 
         private void btnAddModel_Click(object sender, EventArgs e)
@@ -464,75 +464,7 @@ namespace MashineLearning.Classification
         {
             if (nUD_EpsNoisy.Value == 0)
                 nUD_EpsNoisy.Value = (decimal)Math.Pow(10, -nUD_EpsNoisy.DecimalPlaces);
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {/*
-            _drawerImages.DrawBinaryPoint(0, Color.YellowGreen);
-            _drawerImages.DrawBinaryPoint(599, Color.YellowGreen);
-            _drawerImages.DrawBinaryPoint(580, Color.YellowGreen);
-            _drawerImages.DrawBinaryPoint(19, Color.YellowGreen);
-            _drawerImages.DrawBinaryPoint(289, Color.YellowGreen);
-            _drawerImages.DrawBinaryPoint(299, Color.YellowGreen);
-            _drawerImages.DrawBinaryPoint(280, Color.YellowGreen);
-            _drawerImages.DrawBinaryPoint(9, Color.YellowGreen);
-            _drawerImages.DrawBinaryPoint(589, Color.YellowGreen);
-            _drawerImages.DrawBinaryPoint(600, Color.YellowGreen);
-
-
-
-            return;*/
-            txB_CountParts.Visible = true;
-            lblCountParts.Visible = true;
-            return;
-            txB_NameTypeModel.Text = _currClassificator.Classificate(_collectionAvalaibleImages.GetModel(30, 20, "Hunter"));
-            return;
-            string[] testTypes = _collectionAvalaibleImages.GetTypes(30, 20);
-            int count = 0, allcou = 0;
-            ImBinary currIm;            
-            foreach (string type in testTypes)
-            {
-                for (uint i = 200; i < 700; i++)
-                {
-                    currIm = _collectionAvalaibleImages.GetNoiseImage(30, 20, type, i);
-                    count += (currIm.Type == _currClassificator.Classificate(currIm)) ? 1 : 0;
-                    allcou++;
-                }
-            }
-            txB_NameTypeModel.Text = (((double)count) / allcou).ToString();
-
-            //{
-            //    List<ImBinary> allIm = _collectionAvalaibleImages.GetImBinarys(30, 20);
-            //    int count = 0;
-            //    for (int i = 0, n = allIm.Count; i < n; i++)
-            //        count += (allIm[i].Type == _classificator.Classificate(allIm[i])) ? 1 : 0;
-            //    comboBox1.Items.Add(((double)count) / allIm.Count);
-            //}
-            //ImBinary currIm = null;
-            //string[] parse = dUD_ListImage.SelectedItem.ToString().Split(new char[2] { 'x', '_' }, 4);
-
-            //byte row_cou = Convert.ToByte(parse[1]),
-            //     col_cou = Convert.ToByte(parse[2]);
-            //string typeModel = parse[3];
-            //switch (parse[0][0])
-            //{
-            //    case MARK_MODEL:
-            //        currIm = _collectionAvalaibleImages.GetModel(row_cou, col_cou, typeModel);
-            //        break;
-            //    case MARK_NOISE_IMAGE:
-            //        uint numNoiseImage = Convert.ToUInt32(parse[0].Substring(1));
-            //        currIm = _collectionAvalaibleImages.GetNoiseImage(row_cou, col_cou, typeModel, numNoiseImage);
-            //        break;
-            //    default:
-            //        break;
-            //}
-            //comboBox1.Items.Add(_classificator.Classificate(currIm));
-            return;
-            _currClassificator = DecisionTreeForImBinary.CreateInstance(_collectionAvalaibleImages.GetImBinarys(30, 20).ToArray());
-            uint[] t = _currClassificator.NumbersImportantProps;
-            foreach (uint p in t) 
-                cmB_Dimensionalitys.Items.Add(p);
-        }
+        }        
 
         private void cLB_ListAvalaibleImages_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -640,13 +572,13 @@ namespace MashineLearning.Classification
                 DecisionTreeForImBinary newClassificator = null;
                 if (rdB_AllLearnData.Checked)
                 {
-                    newClassificator = DecisionTreeForImBinary.CreateInstance(selectLearnImages, DecisionTreeForImBinary.MethodBuild.CART);
+                    newClassificator = DecisionTreeForImBinary.CreateInstance(selectLearnImages, this._critSelectProp);
                 }
 
                 if (rdB_CrossValidation.Checked)
                 {
                     DecisionTreeForImBinary classificatorCanditat;
-                    ImBinary[] learningPart/*, testingPart*/;
+                    ImBinary[] learningPart;
                     if (rdB_SpecifiedProportion.Checked)
                     {   
                         int countLearnIms = (int)(double.Parse(txB_PercentPartition.Text) * selectLearnImages.Length),
@@ -666,7 +598,6 @@ namespace MashineLearning.Classification
                         }
 
                         learningPart = new ImBinary[countLearnIms];
-                        //testingPart = new ImBinary[countAllIms - countLearnIms];
                         dGV_ResultCrossValidation.RowCount = 0;
                         ImBinary[] allIms = new ImBinary[countAllIms];
                         double perfectEstim = 0, currEstim;
@@ -682,14 +613,9 @@ namespace MashineLearning.Classification
                                 allIms[rand_ind] = allIms[countAllIms - 1 - j];
                                 allIms[countAllIms - 1 - j] = null;
                             }
-                            //for (int j = 0, n = countAllIms - countLearnIms; j < n; j++)
-                            //{
-                            //    testingPart[j] = allLearnData[j];
-                            //    allLearnData[j] = null;
-                            //}                               
 
                             //learning
-                            classificatorCanditat = DecisionTreeForImBinary.CreateInstance(learningPart);
+                            classificatorCanditat = DecisionTreeForImBinary.CreateInstance(learningPart, this._critSelectProp);
 
                             //testing
                             correctClasific = 0;
@@ -700,6 +626,7 @@ namespace MashineLearning.Classification
                             {
                                 perfectEstim = currEstim;
                                 newClassificator = classificatorCanditat;
+                                lblMaxEstim.Text = "Максимальна оцінка = " + perfectEstim;
                             }
                             dGV_ResultCrossValidation.Rows.Add(i, currEstim);
                         }
@@ -747,7 +674,7 @@ namespace MashineLearning.Classification
                             }
 
                             //learning
-                            classificatorCanditat = DecisionTreeForImBinary.CreateInstance(learningPart);
+                            classificatorCanditat = DecisionTreeForImBinary.CreateInstance(learningPart, this._critSelectProp);
 
                             //testing
                             correctClasific = 0;
@@ -758,6 +685,7 @@ namespace MashineLearning.Classification
                             {
                                 perfectEstim = currEstim;
                                 newClassificator = classificatorCanditat;
+                                lblMaxEstim.Text = "Максимальна оцінка = " + perfectEstim;
                             }
                             dGV_ResultCrossValidation.Rows.Add(i, currEstim);
                         }
@@ -779,7 +707,7 @@ namespace MashineLearning.Classification
             else
             {
                 lblStatusCreateClassificator.ForeColor = Color.OrangeRed;
-                lblStatusCreateClassificator.Text = "Оберіть образи зі списку вище!";                
+                lblStatusCreateClassificator.Text = "Оберіть образи зі списку зліва!";                
             }
         }
 
@@ -828,6 +756,11 @@ namespace MashineLearning.Classification
         {
             if (e.KeyCode == Keys.Enter)
                 btnCreateClassificator.Focus();
+        }
+
+        private void rdB_CART_CheckedChanged(object sender, EventArgs e)
+        {
+            _critSelectProp = (rdB_CART.Checked ? DecisionTreeForImBinary.MethodBuild.CART : DecisionTreeForImBinary.MethodBuild.C4_5);
         }
     }
 }

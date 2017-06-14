@@ -72,9 +72,6 @@ namespace MashineLearning.Classification
         {
             if ((index_row < _countRowsInMatrix) && (index_col < _countColumnsInMatrix))
             {
-                //int dx = _screen.Width / _countColumnsInMatrix,
-                //    dy = _screen.Height / _countRowsInMatrix;
-
                 if (EqualityColors(((Bitmap)_screen.Image).GetPixel(index_col * _dx, index_row * _dy), _color0))
                     _drawer.FillRectangle(new SolidBrush(_color1), index_col * _dx, index_row * _dy, _dx, _dy);
                 else
@@ -116,7 +113,6 @@ namespace MashineLearning.Classification
                 for (byte r = 0; r < im.RowCount; r++)
                     for (byte c = 0; c < im.ColumnCount; c++)
                         if(im.GetProp((uint)(r * im.ColumnCount + c)) == 1) 
-                            //DrawBinaryPoint(r, c);
                             _drawer.FillRectangle(new SolidBrush(_color1), c * _dx, r * _dy, _dx, _dy);
                 _screen.Refresh();
                 return true;
@@ -174,8 +170,6 @@ namespace MashineLearning.Classification
                     _dy = _dx;
 
                 //змінюємо координати компонента відображення до кратних кількості рядків і стовпців матриці
-                //_screen.Height = (_screen.MaximumSize.Height / _countRowsInMatrix) * _countRowsInMatrix;
-                //_screen.Width = (_screen.MaximumSize.Width / _countColumnsInMatrix) * _countColumnsInMatrix;
                 _screen.Height = _dy * _countRowsInMatrix;
                 _screen.Width = _dx * _countColumnsInMatrix;
 
@@ -199,8 +193,10 @@ namespace MashineLearning.Classification
                 //_screen.Image = new Bitmap(_screen.MaximumSize.Width, _screen.MaximumSize.Height);
                 //_drawer = Graphics.FromImage(screen.Image); 
                 //ClearIm();
-                ChangeParamMatrix(count_rows, count_columns);               
+                ChangeParamMatrix(count_rows, count_columns);
             }
+            else
+                throw new ArgumentNullException("screen");
         }
     }
 }

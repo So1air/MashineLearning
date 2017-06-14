@@ -16,3 +16,6 @@ E:\Git Local Repo\Методи обробки та візуалізації ба
 E:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\Classification.csproj.GenerateResource.Cache
 E:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\bin\Debug\Lab1.exe
 E:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\bin\Debug\Lab1.pdb
+E:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\bin\Debug\uk-UA\Lab1.resources.dll
+E:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\MashineLearning.Classification.frmMashineLearning.uk-UA.resources
+E:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\uk-UA\Lab1.resources.dll

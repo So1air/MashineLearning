@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace MashineLearning.Classification
 {
-    class LearnSetOfImBinarys//: IEnumerable<ImBinary>
+    class LearnSetOfImBinarys
     {
         private byte _heightIm = 1, _widthIm = 1;
         private Dictionary<string, List<ImBinary>> _set = new Dictionary<string,List<ImBinary>>();

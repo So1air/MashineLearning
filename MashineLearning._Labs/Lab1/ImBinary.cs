@@ -100,7 +100,7 @@ namespace MashineLearning.Classification
 
         public override string ToString()
         {
-            return (this._row_count + "x" + this._col_count + " - " + this._type);
+            return (this._row_count + "x" + this._col_count + ((this._type != null) ? (" -> " + this._type) : ""));
         }
 
         public ImBinary(byte rc, byte cc)
