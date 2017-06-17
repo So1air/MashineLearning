@@ -117,840 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;btnCancelIm.Name" xml:space="preserve">
-    <value>btnCancelIm</value>
-  </data>
-  <data name="&gt;&gt;btnCancelIm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnCancelIm.Parent" xml:space="preserve">
-    <value>tbP_LearnAndTestImages</value>
-  </data>
-  <data name="&gt;&gt;btnCancelIm.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnAcceptIm.Name" xml:space="preserve">
-    <value>btnAcceptIm</value>
-  </data>
-  <data name="&gt;&gt;btnAcceptIm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAcceptIm.Parent" xml:space="preserve">
-    <value>tbP_LearnAndTestImages</value>
-  </data>
-  <data name="&gt;&gt;btnAcceptIm.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;txB_NumChooseIm.Name" xml:space="preserve">
-    <value>txB_NumChooseIm</value>
-  </data>
-  <data name="&gt;&gt;txB_NumChooseIm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txB_NumChooseIm.Parent" xml:space="preserve">
-    <value>tbP_LearnAndTestImages</value>
-  </data>
-  <data name="&gt;&gt;txB_NumChooseIm.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;lblCursorPosInMatrCoord.Name" xml:space="preserve">
-    <value>lblCursorPosInMatrCoord</value>
-  </data>
-  <data name="&gt;&gt;lblCursorPosInMatrCoord.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCursorPosInMatrCoord.Parent" xml:space="preserve">
-    <value>tbP_LearnAndTestImages</value>
-  </data>
-  <data name="&gt;&gt;lblCursorPosInMatrCoord.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lblCurrMatrCoord.Name" xml:space="preserve">
-    <value>lblCurrMatrCoord</value>
-  </data>
-  <data name="&gt;&gt;lblCurrMatrCoord.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCurrMatrCoord.Parent" xml:space="preserve">
-    <value>tbP_LearnAndTestImages</value>
-  </data>
-  <data name="&gt;&gt;lblCurrMatrCoord.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;btnDeleteIm.Name" xml:space="preserve">
-    <value>btnDeleteIm</value>
-  </data>
-  <data name="&gt;&gt;btnDeleteIm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnDeleteIm.Parent" xml:space="preserve">
-    <value>tbP_LearnAndTestImages</value>
-  </data>
-  <data name="&gt;&gt;btnDeleteIm.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;btnChangeIm.Name" xml:space="preserve">
-    <value>btnChangeIm</value>
-  </data>
-  <data name="&gt;&gt;btnChangeIm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnChangeIm.Parent" xml:space="preserve">
-    <value>tbP_LearnAndTestImages</value>
-  </data>
-  <data name="&gt;&gt;btnChangeIm.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;nUD_ColCount.Name" xml:space="preserve">
-    <value>nUD_ColCount</value>
-  </data>
-  <data name="&gt;&gt;nUD_ColCount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nUD_ColCount.Parent" xml:space="preserve">
-    <value>tbP_LearnAndTestImages</value>
-  </data>
-  <data name="&gt;&gt;nUD_ColCount.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;lbl_ColCount.Name" xml:space="preserve">
-    <value>lbl_ColCount</value>
-  </data>
-  <data name="&gt;&gt;lbl_ColCount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_ColCount.Parent" xml:space="preserve">
-    <value>tbP_LearnAndTestImages</value>
-  </data>
-  <data name="&gt;&gt;lbl_ColCount.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;lbl_RowCount.Name" xml:space="preserve">
-    <value>lbl_RowCount</value>
-  </data>
-  <data name="&gt;&gt;lbl_RowCount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_RowCount.Parent" xml:space="preserve">
-    <value>tbP_LearnAndTestImages</value>
-  </data>
-  <data name="&gt;&gt;lbl_RowCount.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;lblParMatrix.Name" xml:space="preserve">
-    <value>lblParMatrix</value>
-  </data>
-  <data name="&gt;&gt;lblParMatrix.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblParMatrix.Parent" xml:space="preserve">
-    <value>tbP_LearnAndTestImages</value>
-  </data>
-  <data name="&gt;&gt;lblParMatrix.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;nUD_RowCount.Name" xml:space="preserve">
-    <value>nUD_RowCount</value>
-  </data>
-  <data name="&gt;&gt;nUD_RowCount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nUD_RowCount.Parent" xml:space="preserve">
-    <value>tbP_LearnAndTestImages</value>
-  </data>
-  <data name="&gt;&gt;nUD_RowCount.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;pnl_SaveAndLoad.Name" xml:space="preserve">
-    <value>pnl_SaveAndLoad</value>
-  </data>
-  <data name="&gt;&gt;pnl_SaveAndLoad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnl_SaveAndLoad.Parent" xml:space="preserve">
-    <value>tbP_LearnAndTestImages</value>
-  </data>
-  <data name="&gt;&gt;pnl_SaveAndLoad.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;grB_AddModel.Name" xml:space="preserve">
-    <value>grB_AddModel</value>
-  </data>
-  <data name="&gt;&gt;grB_AddModel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grB_AddModel.Parent" xml:space="preserve">
-    <value>tbP_LearnAndTestImages</value>
-  </data>
-  <data name="&gt;&gt;grB_AddModel.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;grB_CreateNoisyImages.Name" xml:space="preserve">
-    <value>grB_CreateNoisyImages</value>
-  </data>
-  <data name="&gt;&gt;grB_CreateNoisyImages.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grB_CreateNoisyImages.Parent" xml:space="preserve">
-    <value>tbP_LearnAndTestImages</value>
-  </data>
-  <data name="&gt;&gt;grB_CreateNoisyImages.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;dUD_ListImage.Name" xml:space="preserve">
-    <value>dUD_ListImage</value>
-  </data>
-  <data name="&gt;&gt;dUD_ListImage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DomainUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dUD_ListImage.Parent" xml:space="preserve">
-    <value>tbP_LearnAndTestImages</value>
-  </data>
-  <data name="&gt;&gt;dUD_ListImage.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;pcB_Image.Name" xml:space="preserve">
-    <value>pcB_Image</value>
-  </data>
-  <data name="&gt;&gt;pcB_Image.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pcB_Image.Parent" xml:space="preserve">
-    <value>tbP_LearnAndTestImages</value>
-  </data>
-  <data name="&gt;&gt;pcB_Image.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="tbP_LearnAndTestImages.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tbP_LearnAndTestImages.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tbP_LearnAndTestImages.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1176, 610</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tbP_LearnAndTestImages.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="tbP_LearnAndTestImages.Text" xml:space="preserve">
-    <value>Навчально-тестові образи</value>
-  </data>
-  <data name="&gt;&gt;tbP_LearnAndTestImages.Name" xml:space="preserve">
-    <value>tbP_LearnAndTestImages</value>
-  </data>
-  <data name="&gt;&gt;tbP_LearnAndTestImages.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbP_LearnAndTestImages.Parent" xml:space="preserve">
-    <value>tbC_Main</value>
-  </data>
-  <data name="&gt;&gt;tbP_LearnAndTestImages.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="grB_EstimationQualityClassication.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Right</value>
-  </data>
-  <data name="lblMaxEstim.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="lblMaxEstim.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblMaxEstim.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 571</value>
-  </data>
-  <data name="lblMaxEstim.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 13</value>
-  </data>
-  <data name="lblMaxEstim.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;lblMaxEstim.Name" xml:space="preserve">
-    <value>lblMaxEstim</value>
-  </data>
-  <data name="&gt;&gt;lblMaxEstim.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblMaxEstim.Parent" xml:space="preserve">
-    <value>grB_EstimationQualityClassication</value>
-  </data>
-  <data name="&gt;&gt;lblMaxEstim.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="txB_CountParts.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="txB_CountParts.Location" type="System.Drawing.Point, System.Drawing">
-    <value>168, 129</value>
-  </data>
-  <data name="txB_CountParts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
-  <data name="txB_CountParts.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="txB_CountParts.Text" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="txB_CountParts.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="txB_CountParts.WordWrap" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;txB_CountParts.Name" xml:space="preserve">
-    <value>txB_CountParts</value>
-  </data>
-  <data name="&gt;&gt;txB_CountParts.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txB_CountParts.Parent" xml:space="preserve">
-    <value>grB_EstimationQualityClassication</value>
-  </data>
-  <data name="&gt;&gt;txB_CountParts.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="colDGV_Iteration.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="сolDGV_PercentCorrectClassific.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dGV_ResultCrossValidation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="dGV_ResultCrossValidation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 206</value>
-  </data>
-  <data name="dGV_ResultCrossValidation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>405, 350</value>
-  </data>
-  <data name="dGV_ResultCrossValidation.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;dGV_ResultCrossValidation.Name" xml:space="preserve">
-    <value>dGV_ResultCrossValidation</value>
-  </data>
-  <data name="&gt;&gt;dGV_ResultCrossValidation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dGV_ResultCrossValidation.Parent" xml:space="preserve">
-    <value>grB_EstimationQualityClassication</value>
-  </data>
-  <data name="&gt;&gt;dGV_ResultCrossValidation.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lblCountParts.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblCountParts.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 132</value>
-  </data>
-  <data name="lblCountParts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 13</value>
-  </data>
-  <data name="lblCountParts.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="lblCountParts.Text" xml:space="preserve">
-    <value>Кількість частин:</value>
-  </data>
-  <data name="lblCountParts.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;lblCountParts.Name" xml:space="preserve">
-    <value>lblCountParts</value>
-  </data>
-  <data name="&gt;&gt;lblCountParts.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCountParts.Parent" xml:space="preserve">
-    <value>grB_EstimationQualityClassication</value>
-  </data>
-  <data name="&gt;&gt;lblCountParts.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="grB_SettingOfProportion.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="lblPercentPartition.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblPercentPartition.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 26</value>
-  </data>
-  <data name="lblPercentPartition.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 13</value>
-  </data>
-  <data name="lblPercentPartition.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="lblPercentPartition.Text" xml:space="preserve">
-    <value>Доля навчальних даних:</value>
-  </data>
-  <data name="&gt;&gt;lblPercentPartition.Name" xml:space="preserve">
-    <value>lblPercentPartition</value>
-  </data>
-  <data name="&gt;&gt;lblPercentPartition.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblPercentPartition.Parent" xml:space="preserve">
-    <value>grB_SettingOfProportion</value>
-  </data>
-  <data name="&gt;&gt;lblPercentPartition.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lblCountIteration.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblCountIteration.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 51</value>
-  </data>
-  <data name="lblCountIteration.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 13</value>
-  </data>
-  <data name="lblCountIteration.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="lblCountIteration.Text" xml:space="preserve">
-    <value>Кількість повторень:</value>
-  </data>
-  <data name="&gt;&gt;lblCountIteration.Name" xml:space="preserve">
-    <value>lblCountIteration</value>
-  </data>
-  <data name="&gt;&gt;lblCountIteration.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCountIteration.Parent" xml:space="preserve">
-    <value>grB_SettingOfProportion</value>
-  </data>
-  <data name="&gt;&gt;lblCountIteration.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="txB_PercentPartition.Location" type="System.Drawing.Point, System.Drawing">
-    <value>158, 23</value>
-  </data>
-  <data name="txB_PercentPartition.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 20</value>
-  </data>
-  <data name="txB_PercentPartition.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="txB_PercentPartition.Text" xml:space="preserve">
-    <value>0,75</value>
-  </data>
-  <data name="&gt;&gt;txB_PercentPartition.Name" xml:space="preserve">
-    <value>txB_PercentPartition</value>
-  </data>
-  <data name="&gt;&gt;txB_PercentPartition.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txB_PercentPartition.Parent" xml:space="preserve">
-    <value>grB_SettingOfProportion</value>
-  </data>
-  <data name="&gt;&gt;txB_PercentPartition.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="nUD_CountIteration.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 49</value>
-  </data>
-  <data name="nUD_CountIteration.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 20</value>
-  </data>
-  <data name="nUD_CountIteration.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;nUD_CountIteration.Name" xml:space="preserve">
-    <value>nUD_CountIteration</value>
-  </data>
-  <data name="&gt;&gt;nUD_CountIteration.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nUD_CountIteration.Parent" xml:space="preserve">
-    <value>grB_SettingOfProportion</value>
-  </data>
-  <data name="&gt;&gt;nUD_CountIteration.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="grB_SettingOfProportion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 106</value>
-  </data>
-  <data name="grB_SettingOfProportion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>405, 83</value>
-  </data>
-  <data name="grB_SettingOfProportion.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="grB_SettingOfProportion.Text" xml:space="preserve">
-    <value>Налаштування пропорційного розбиття</value>
-  </data>
-  <data name="&gt;&gt;grB_SettingOfProportion.Name" xml:space="preserve">
-    <value>grB_SettingOfProportion</value>
-  </data>
-  <data name="&gt;&gt;grB_SettingOfProportion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grB_SettingOfProportion.Parent" xml:space="preserve">
-    <value>grB_EstimationQualityClassication</value>
-  </data>
-  <data name="&gt;&gt;grB_SettingOfProportion.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="grB_TypePartition.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;rdB_SpecifiedNumber_ofParts.Name" xml:space="preserve">
-    <value>rdB_SpecifiedNumber_ofParts</value>
-  </data>
-  <data name="&gt;&gt;rdB_SpecifiedNumber_ofParts.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rdB_SpecifiedNumber_ofParts.Parent" xml:space="preserve">
-    <value>grB_TypePartition</value>
-  </data>
-  <data name="&gt;&gt;rdB_SpecifiedNumber_ofParts.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;rdB_SpecifiedProportion.Name" xml:space="preserve">
-    <value>rdB_SpecifiedProportion</value>
-  </data>
-  <data name="&gt;&gt;rdB_SpecifiedProportion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rdB_SpecifiedProportion.Parent" xml:space="preserve">
-    <value>grB_TypePartition</value>
-  </data>
-  <data name="&gt;&gt;rdB_SpecifiedProportion.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="grB_TypePartition.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 22</value>
-  </data>
-  <data name="grB_TypePartition.Size" type="System.Drawing.Size, System.Drawing">
-    <value>405, 78</value>
-  </data>
-  <data name="grB_TypePartition.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="grB_TypePartition.Text" xml:space="preserve">
-    <value>Тип розбиття</value>
-  </data>
-  <data name="&gt;&gt;grB_TypePartition.Name" xml:space="preserve">
-    <value>grB_TypePartition</value>
-  </data>
-  <data name="&gt;&gt;grB_TypePartition.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grB_TypePartition.Parent" xml:space="preserve">
-    <value>grB_EstimationQualityClassication</value>
-  </data>
-  <data name="&gt;&gt;grB_TypePartition.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="grB_EstimationQualityClassication.Location" type="System.Drawing.Point, System.Drawing">
-    <value>751, 6</value>
-  </data>
-  <data name="grB_EstimationQualityClassication.Size" type="System.Drawing.Size, System.Drawing">
-    <value>417, 596</value>
-  </data>
-  <data name="grB_EstimationQualityClassication.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="grB_EstimationQualityClassication.Text" xml:space="preserve">
-    <value>Оцінка якості класифікації(результати CV)</value>
-  </data>
-  <data name="grB_EstimationQualityClassication.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;grB_EstimationQualityClassication.Name" xml:space="preserve">
-    <value>grB_EstimationQualityClassication</value>
-  </data>
-  <data name="&gt;&gt;grB_EstimationQualityClassication.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grB_EstimationQualityClassication.Parent" xml:space="preserve">
-    <value>tbP_SelectLearnDataAndAddClassificator</value>
-  </data>
-  <data name="&gt;&gt;grB_EstimationQualityClassication.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="grB_CreateClassificator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left</value>
-  </data>
-  <data name="&gt;&gt;grB_CritSelectProperty.Name" xml:space="preserve">
-    <value>grB_CritSelectProperty</value>
-  </data>
-  <data name="&gt;&gt;grB_CritSelectProperty.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grB_CritSelectProperty.Parent" xml:space="preserve">
-    <value>grB_CreateClassificator</value>
-  </data>
-  <data name="&gt;&gt;grB_CritSelectProperty.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblCountCheckedImsForLearning.Name" xml:space="preserve">
-    <value>lblCountCheckedImsForLearning</value>
-  </data>
-  <data name="&gt;&gt;lblCountCheckedImsForLearning.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCountCheckedImsForLearning.Parent" xml:space="preserve">
-    <value>grB_CreateClassificator</value>
-  </data>
-  <data name="&gt;&gt;lblCountCheckedImsForLearning.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;grB_UsingLearnData.Name" xml:space="preserve">
-    <value>grB_UsingLearnData</value>
-  </data>
-  <data name="&gt;&gt;grB_UsingLearnData.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grB_UsingLearnData.Parent" xml:space="preserve">
-    <value>grB_CreateClassificator</value>
-  </data>
-  <data name="&gt;&gt;grB_UsingLearnData.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pcB_DemoLearnIm.Name" xml:space="preserve">
-    <value>pcB_DemoLearnIm</value>
-  </data>
-  <data name="&gt;&gt;pcB_DemoLearnIm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pcB_DemoLearnIm.Parent" xml:space="preserve">
-    <value>grB_CreateClassificator</value>
-  </data>
-  <data name="&gt;&gt;pcB_DemoLearnIm.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lblStatusCreateClassificator.Name" xml:space="preserve">
-    <value>lblStatusCreateClassificator</value>
-  </data>
-  <data name="&gt;&gt;lblStatusCreateClassificator.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblStatusCreateClassificator.Parent" xml:space="preserve">
-    <value>grB_CreateClassificator</value>
-  </data>
-  <data name="&gt;&gt;lblStatusCreateClassificator.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;btnCreateClassificator.Name" xml:space="preserve">
-    <value>btnCreateClassificator</value>
-  </data>
-  <data name="&gt;&gt;btnCreateClassificator.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnCreateClassificator.Parent" xml:space="preserve">
-    <value>grB_CreateClassificator</value>
-  </data>
-  <data name="&gt;&gt;btnCreateClassificator.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;cLB_LearnImages.Name" xml:space="preserve">
-    <value>cLB_LearnImages</value>
-  </data>
-  <data name="&gt;&gt;cLB_LearnImages.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cLB_LearnImages.Parent" xml:space="preserve">
-    <value>grB_CreateClassificator</value>
-  </data>
-  <data name="&gt;&gt;cLB_LearnImages.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;lblDimensionality.Name" xml:space="preserve">
-    <value>lblDimensionality</value>
-  </data>
-  <data name="&gt;&gt;lblDimensionality.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblDimensionality.Parent" xml:space="preserve">
-    <value>grB_CreateClassificator</value>
-  </data>
-  <data name="&gt;&gt;lblDimensionality.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;cmB_Dimensionalitys.Name" xml:space="preserve">
-    <value>cmB_Dimensionalitys</value>
-  </data>
-  <data name="&gt;&gt;cmB_Dimensionalitys.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmB_Dimensionalitys.Parent" xml:space="preserve">
-    <value>grB_CreateClassificator</value>
-  </data>
-  <data name="&gt;&gt;cmB_Dimensionalitys.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="grB_CreateClassificator.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 6</value>
-  </data>
-  <data name="grB_CreateClassificator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>721, 596</value>
-  </data>
-  <data name="grB_CreateClassificator.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="grB_CreateClassificator.Text" xml:space="preserve">
-    <value>Створення класифікатора</value>
-  </data>
-  <data name="&gt;&gt;grB_CreateClassificator.Name" xml:space="preserve">
-    <value>grB_CreateClassificator</value>
-  </data>
-  <data name="&gt;&gt;grB_CreateClassificator.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grB_CreateClassificator.Parent" xml:space="preserve">
-    <value>tbP_SelectLearnDataAndAddClassificator</value>
-  </data>
-  <data name="&gt;&gt;grB_CreateClassificator.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tbP_SelectLearnDataAndAddClassificator.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tbP_SelectLearnDataAndAddClassificator.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tbP_SelectLearnDataAndAddClassificator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1176, 610</value>
-  </data>
-  <data name="tbP_SelectLearnDataAndAddClassificator.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tbP_SelectLearnDataAndAddClassificator.Text" xml:space="preserve">
-    <value>Cтворення нового класифікатора</value>
-  </data>
-  <data name="&gt;&gt;tbP_SelectLearnDataAndAddClassificator.Name" xml:space="preserve">
-    <value>tbP_SelectLearnDataAndAddClassificator</value>
-  </data>
-  <data name="&gt;&gt;tbP_SelectLearnDataAndAddClassificator.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbP_SelectLearnDataAndAddClassificator.Parent" xml:space="preserve">
-    <value>tbC_Main</value>
-  </data>
-  <data name="&gt;&gt;tbP_SelectLearnDataAndAddClassificator.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
-    <value>tbP_Classification</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
-    <value>tbP_Classification</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>tbP_Classification</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pcB_DemoIm.Name" xml:space="preserve">
-    <value>pcB_DemoIm</value>
-  </data>
-  <data name="&gt;&gt;pcB_DemoIm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pcB_DemoIm.Parent" xml:space="preserve">
-    <value>tbP_Classification</value>
-  </data>
-  <data name="&gt;&gt;pcB_DemoIm.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="tbP_Classification.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tbP_Classification.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tbP_Classification.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1176, 610</value>
-  </data>
-  <data name="tbP_Classification.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="tbP_Classification.Text" xml:space="preserve">
-    <value>Класифікація образів</value>
-  </data>
-  <data name="&gt;&gt;tbP_Classification.Name" xml:space="preserve">
-    <value>tbP_Classification</value>
-  </data>
-  <data name="&gt;&gt;tbP_Classification.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbP_Classification.Parent" xml:space="preserve">
-    <value>tbC_Main</value>
-  </data>
-  <data name="&gt;&gt;tbP_Classification.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tbC_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tbC_Main.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="tbC_Main.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1184, 636</value>
-  </data>
-  <data name="tbC_Main.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tbC_Main.Name" xml:space="preserve">
-    <value>tbC_Main</value>
-  </data>
-  <data name="&gt;&gt;tbC_Main.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbC_Main.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tbC_Main.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="btnCancelIm.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
   <data name="btnCancelIm.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnCancelIm.Location" type="System.Drawing.Point, System.Drawing">
     <value>840, 558</value>
   </data>
   <data name="btnCancelIm.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 23</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnCancelIm.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
@@ -1287,99 +468,6 @@
   <data name="pnl_SaveAndLoad.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
-  <data name="&gt;&gt;chB_CheckAll.Name" xml:space="preserve">
-    <value>chB_CheckAll</value>
-  </data>
-  <data name="&gt;&gt;chB_CheckAll.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chB_CheckAll.Parent" xml:space="preserve">
-    <value>pnl_SaveAndLoad</value>
-  </data>
-  <data name="&gt;&gt;chB_CheckAll.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;chB_RandomOrder.Name" xml:space="preserve">
-    <value>chB_RandomOrder</value>
-  </data>
-  <data name="&gt;&gt;chB_RandomOrder.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chB_RandomOrder.Parent" xml:space="preserve">
-    <value>pnl_SaveAndLoad</value>
-  </data>
-  <data name="&gt;&gt;chB_RandomOrder.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnLoadFromFile.Name" xml:space="preserve">
-    <value>btnLoadFromFile</value>
-  </data>
-  <data name="&gt;&gt;btnLoadFromFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnLoadFromFile.Parent" xml:space="preserve">
-    <value>pnl_SaveAndLoad</value>
-  </data>
-  <data name="&gt;&gt;btnLoadFromFile.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnSaveInFile.Name" xml:space="preserve">
-    <value>btnSaveInFile</value>
-  </data>
-  <data name="&gt;&gt;btnSaveInFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSaveInFile.Parent" xml:space="preserve">
-    <value>pnl_SaveAndLoad</value>
-  </data>
-  <data name="&gt;&gt;btnSaveInFile.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;cLB_ListAvalaibleImages.Name" xml:space="preserve">
-    <value>cLB_ListAvalaibleImages</value>
-  </data>
-  <data name="&gt;&gt;cLB_ListAvalaibleImages.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cLB_ListAvalaibleImages.Parent" xml:space="preserve">
-    <value>pnl_SaveAndLoad</value>
-  </data>
-  <data name="&gt;&gt;cLB_ListAvalaibleImages.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;lblListAvalaibleImages.Name" xml:space="preserve">
-    <value>lblListAvalaibleImages</value>
-  </data>
-  <data name="&gt;&gt;lblListAvalaibleImages.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblListAvalaibleImages.Parent" xml:space="preserve">
-    <value>pnl_SaveAndLoad</value>
-  </data>
-  <data name="&gt;&gt;lblListAvalaibleImages.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="pnl_SaveAndLoad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 297</value>
-  </data>
-  <data name="pnl_SaveAndLoad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>444, 296</value>
-  </data>
-  <data name="pnl_SaveAndLoad.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;pnl_SaveAndLoad.Name" xml:space="preserve">
-    <value>pnl_SaveAndLoad</value>
-  </data>
-  <data name="&gt;&gt;pnl_SaveAndLoad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnl_SaveAndLoad.Parent" xml:space="preserve">
-    <value>tbP_LearnAndTestImages</value>
-  </data>
-  <data name="&gt;&gt;pnl_SaveAndLoad.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
   <data name="chB_CheckAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
@@ -1548,77 +636,26 @@
   <data name="&gt;&gt;lblListAvalaibleImages.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;lblStatusNameModel.Name" xml:space="preserve">
-    <value>lblStatusNameModel</value>
+  <data name="pnl_SaveAndLoad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 297</value>
   </data>
-  <data name="&gt;&gt;lblStatusNameModel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="pnl_SaveAndLoad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>444, 296</value>
   </data>
-  <data name="&gt;&gt;lblStatusNameModel.Parent" xml:space="preserve">
-    <value>grB_AddModel</value>
+  <data name="pnl_SaveAndLoad.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
-  <data name="&gt;&gt;lblStatusNameModel.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;pnl_SaveAndLoad.Name" xml:space="preserve">
+    <value>pnl_SaveAndLoad</value>
   </data>
-  <data name="&gt;&gt;lbl_NameTypeModel.Name" xml:space="preserve">
-    <value>lbl_NameTypeModel</value>
+  <data name="&gt;&gt;pnl_SaveAndLoad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_NameTypeModel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_NameTypeModel.Parent" xml:space="preserve">
-    <value>grB_AddModel</value>
-  </data>
-  <data name="&gt;&gt;lbl_NameTypeModel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnAddModel.Name" xml:space="preserve">
-    <value>btnAddModel</value>
-  </data>
-  <data name="&gt;&gt;btnAddModel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAddModel.Parent" xml:space="preserve">
-    <value>grB_AddModel</value>
-  </data>
-  <data name="&gt;&gt;btnAddModel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;txB_NameTypeModel.Name" xml:space="preserve">
-    <value>txB_NameTypeModel</value>
-  </data>
-  <data name="&gt;&gt;txB_NameTypeModel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txB_NameTypeModel.Parent" xml:space="preserve">
-    <value>grB_AddModel</value>
-  </data>
-  <data name="&gt;&gt;txB_NameTypeModel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="grB_AddModel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 15</value>
-  </data>
-  <data name="grB_AddModel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>444, 120</value>
-  </data>
-  <data name="grB_AddModel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="grB_AddModel.Text" xml:space="preserve">
-    <value>Додати еталонний образ</value>
-  </data>
-  <data name="&gt;&gt;grB_AddModel.Name" xml:space="preserve">
-    <value>grB_AddModel</value>
-  </data>
-  <data name="&gt;&gt;grB_AddModel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grB_AddModel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pnl_SaveAndLoad.Parent" xml:space="preserve">
     <value>tbP_LearnAndTestImages</value>
   </data>
-  <data name="&gt;&gt;grB_AddModel.ZOrder" xml:space="preserve">
-    <value>13</value>
+  <data name="&gt;&gt;pnl_SaveAndLoad.ZOrder" xml:space="preserve">
+    <value>12</value>
   </data>
   <data name="lblStatusNameModel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1731,125 +768,29 @@
   <data name="&gt;&gt;txB_NameTypeModel.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;lblStatusCreateNoisy.Name" xml:space="preserve">
-    <value>lblStatusCreateNoisy</value>
+  <data name="grB_AddModel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 15</value>
   </data>
-  <data name="&gt;&gt;lblStatusCreateNoisy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="grB_AddModel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>444, 120</value>
   </data>
-  <data name="&gt;&gt;lblStatusCreateNoisy.Parent" xml:space="preserve">
-    <value>grB_CreateNoisyImages</value>
-  </data>
-  <data name="&gt;&gt;lblStatusCreateNoisy.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblEpsNoisy.Name" xml:space="preserve">
-    <value>lblEpsNoisy</value>
-  </data>
-  <data name="&gt;&gt;lblEpsNoisy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblEpsNoisy.Parent" xml:space="preserve">
-    <value>grB_CreateNoisyImages</value>
-  </data>
-  <data name="&gt;&gt;lblEpsNoisy.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;nUD_EpsNoisy.Name" xml:space="preserve">
-    <value>nUD_EpsNoisy</value>
-  </data>
-  <data name="&gt;&gt;nUD_EpsNoisy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nUD_EpsNoisy.Parent" xml:space="preserve">
-    <value>grB_CreateNoisyImages</value>
-  </data>
-  <data name="&gt;&gt;nUD_EpsNoisy.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;nUD_CountNoisy.Name" xml:space="preserve">
-    <value>nUD_CountNoisy</value>
-  </data>
-  <data name="&gt;&gt;nUD_CountNoisy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;nUD_CountNoisy.Parent" xml:space="preserve">
-    <value>grB_CreateNoisyImages</value>
-  </data>
-  <data name="&gt;&gt;nUD_CountNoisy.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lblCountNoisy.Name" xml:space="preserve">
-    <value>lblCountNoisy</value>
-  </data>
-  <data name="&gt;&gt;lblCountNoisy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblCountNoisy.Parent" xml:space="preserve">
-    <value>grB_CreateNoisyImages</value>
-  </data>
-  <data name="&gt;&gt;lblCountNoisy.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;cmB_ListOfModels.Name" xml:space="preserve">
-    <value>cmB_ListOfModels</value>
-  </data>
-  <data name="&gt;&gt;cmB_ListOfModels.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmB_ListOfModels.Parent" xml:space="preserve">
-    <value>grB_CreateNoisyImages</value>
-  </data>
-  <data name="&gt;&gt;cmB_ListOfModels.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;lblModel.Name" xml:space="preserve">
-    <value>lblModel</value>
-  </data>
-  <data name="&gt;&gt;lblModel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblModel.Parent" xml:space="preserve">
-    <value>grB_CreateNoisyImages</value>
-  </data>
-  <data name="&gt;&gt;lblModel.ZOrder" xml:space="preserve">
+  <data name="grB_AddModel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;btnCreateNoisyImage.Name" xml:space="preserve">
-    <value>btnCreateNoisyImage</value>
+  <data name="grB_AddModel.Text" xml:space="preserve">
+    <value>Додати еталонний образ</value>
   </data>
-  <data name="&gt;&gt;btnCreateNoisyImage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;grB_AddModel.Name" xml:space="preserve">
+    <value>grB_AddModel</value>
   </data>
-  <data name="&gt;&gt;btnCreateNoisyImage.Parent" xml:space="preserve">
-    <value>grB_CreateNoisyImages</value>
-  </data>
-  <data name="&gt;&gt;btnCreateNoisyImage.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="grB_CreateNoisyImages.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 157</value>
-  </data>
-  <data name="grB_CreateNoisyImages.Size" type="System.Drawing.Size, System.Drawing">
-    <value>444, 134</value>
-  </data>
-  <data name="grB_CreateNoisyImages.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="grB_CreateNoisyImages.Text" xml:space="preserve">
-    <value>Створення зашумлених зображень</value>
-  </data>
-  <data name="&gt;&gt;grB_CreateNoisyImages.Name" xml:space="preserve">
-    <value>grB_CreateNoisyImages</value>
-  </data>
-  <data name="&gt;&gt;grB_CreateNoisyImages.Type" xml:space="preserve">
+  <data name="&gt;&gt;grB_AddModel.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;grB_CreateNoisyImages.Parent" xml:space="preserve">
+  <data name="&gt;&gt;grB_AddModel.Parent" xml:space="preserve">
     <value>tbP_LearnAndTestImages</value>
   </data>
-  <data name="&gt;&gt;grB_CreateNoisyImages.ZOrder" xml:space="preserve">
-    <value>14</value>
+  <data name="&gt;&gt;grB_AddModel.ZOrder" xml:space="preserve">
+    <value>13</value>
   </data>
   <data name="lblStatusCreateNoisy.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2062,6 +1003,30 @@
   <data name="&gt;&gt;btnCreateNoisyImage.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="grB_CreateNoisyImages.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 157</value>
+  </data>
+  <data name="grB_CreateNoisyImages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>444, 134</value>
+  </data>
+  <data name="grB_CreateNoisyImages.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="grB_CreateNoisyImages.Text" xml:space="preserve">
+    <value>Створення зашумлених зображень</value>
+  </data>
+  <data name="&gt;&gt;grB_CreateNoisyImages.Name" xml:space="preserve">
+    <value>grB_CreateNoisyImages</value>
+  </data>
+  <data name="&gt;&gt;grB_CreateNoisyImages.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grB_CreateNoisyImages.Parent" xml:space="preserve">
+    <value>tbP_LearnAndTestImages</value>
+  </data>
+  <data name="&gt;&gt;grB_CreateNoisyImages.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
   <data name="dUD_ListImage.Location" type="System.Drawing.Point, System.Drawing">
     <value>484, 15</value>
   </data>
@@ -2119,6 +1084,99 @@
   <data name="&gt;&gt;pcB_Image.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
+  <data name="tbP_LearnAndTestImages.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tbP_LearnAndTestImages.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tbP_LearnAndTestImages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1176, 610</value>
+  </data>
+  <data name="tbP_LearnAndTestImages.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tbP_LearnAndTestImages.Text" xml:space="preserve">
+    <value>Навчально-тестові образи</value>
+  </data>
+  <data name="&gt;&gt;tbP_LearnAndTestImages.Name" xml:space="preserve">
+    <value>tbP_LearnAndTestImages</value>
+  </data>
+  <data name="&gt;&gt;tbP_LearnAndTestImages.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbP_LearnAndTestImages.Parent" xml:space="preserve">
+    <value>tbC_Main</value>
+  </data>
+  <data name="&gt;&gt;tbP_LearnAndTestImages.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="grB_EstimationQualityClassication.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Right</value>
+  </data>
+  <data name="lblMaxEstim.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="lblMaxEstim.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMaxEstim.Location" type="System.Drawing.Point, System.Drawing">
+    <value>142, 571</value>
+  </data>
+  <data name="lblMaxEstim.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 13</value>
+  </data>
+  <data name="lblMaxEstim.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;lblMaxEstim.Name" xml:space="preserve">
+    <value>lblMaxEstim</value>
+  </data>
+  <data name="&gt;&gt;lblMaxEstim.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMaxEstim.Parent" xml:space="preserve">
+    <value>grB_EstimationQualityClassication</value>
+  </data>
+  <data name="&gt;&gt;lblMaxEstim.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txB_CountParts.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="txB_CountParts.Location" type="System.Drawing.Point, System.Drawing">
+    <value>168, 129</value>
+  </data>
+  <data name="txB_CountParts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="txB_CountParts.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="txB_CountParts.Text" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="txB_CountParts.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txB_CountParts.WordWrap" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;txB_CountParts.Name" xml:space="preserve">
+    <value>txB_CountParts</value>
+  </data>
+  <data name="&gt;&gt;txB_CountParts.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txB_CountParts.Parent" xml:space="preserve">
+    <value>grB_EstimationQualityClassication</value>
+  </data>
+  <data name="&gt;&gt;txB_CountParts.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dGV_ResultCrossValidation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <metadata name="colDGV_Iteration.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -2130,6 +1188,186 @@
   </metadata>
   <data name="сolDGV_PercentCorrectClassific.HeaderText" xml:space="preserve">
     <value>Відсоток правильно класифікованих</value>
+  </data>
+  <data name="dGV_ResultCrossValidation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 206</value>
+  </data>
+  <data name="dGV_ResultCrossValidation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>405, 350</value>
+  </data>
+  <data name="dGV_ResultCrossValidation.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;dGV_ResultCrossValidation.Name" xml:space="preserve">
+    <value>dGV_ResultCrossValidation</value>
+  </data>
+  <data name="&gt;&gt;dGV_ResultCrossValidation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dGV_ResultCrossValidation.Parent" xml:space="preserve">
+    <value>grB_EstimationQualityClassication</value>
+  </data>
+  <data name="&gt;&gt;dGV_ResultCrossValidation.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblCountParts.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCountParts.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 132</value>
+  </data>
+  <data name="lblCountParts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 13</value>
+  </data>
+  <data name="lblCountParts.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblCountParts.Text" xml:space="preserve">
+    <value>Кількість частин:</value>
+  </data>
+  <data name="lblCountParts.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lblCountParts.Name" xml:space="preserve">
+    <value>lblCountParts</value>
+  </data>
+  <data name="&gt;&gt;lblCountParts.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCountParts.Parent" xml:space="preserve">
+    <value>grB_EstimationQualityClassication</value>
+  </data>
+  <data name="&gt;&gt;lblCountParts.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="grB_SettingOfProportion.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lblPercentPartition.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPercentPartition.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 26</value>
+  </data>
+  <data name="lblPercentPartition.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 13</value>
+  </data>
+  <data name="lblPercentPartition.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblPercentPartition.Text" xml:space="preserve">
+    <value>Доля навчальних даних:</value>
+  </data>
+  <data name="&gt;&gt;lblPercentPartition.Name" xml:space="preserve">
+    <value>lblPercentPartition</value>
+  </data>
+  <data name="&gt;&gt;lblPercentPartition.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPercentPartition.Parent" xml:space="preserve">
+    <value>grB_SettingOfProportion</value>
+  </data>
+  <data name="&gt;&gt;lblPercentPartition.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblCountIteration.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblCountIteration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 51</value>
+  </data>
+  <data name="lblCountIteration.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 13</value>
+  </data>
+  <data name="lblCountIteration.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblCountIteration.Text" xml:space="preserve">
+    <value>Кількість повторень:</value>
+  </data>
+  <data name="&gt;&gt;lblCountIteration.Name" xml:space="preserve">
+    <value>lblCountIteration</value>
+  </data>
+  <data name="&gt;&gt;lblCountIteration.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCountIteration.Parent" xml:space="preserve">
+    <value>grB_SettingOfProportion</value>
+  </data>
+  <data name="&gt;&gt;lblCountIteration.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txB_PercentPartition.Location" type="System.Drawing.Point, System.Drawing">
+    <value>158, 23</value>
+  </data>
+  <data name="txB_PercentPartition.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 20</value>
+  </data>
+  <data name="txB_PercentPartition.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="txB_PercentPartition.Text" xml:space="preserve">
+    <value>0,75</value>
+  </data>
+  <data name="&gt;&gt;txB_PercentPartition.Name" xml:space="preserve">
+    <value>txB_PercentPartition</value>
+  </data>
+  <data name="&gt;&gt;txB_PercentPartition.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txB_PercentPartition.Parent" xml:space="preserve">
+    <value>grB_SettingOfProportion</value>
+  </data>
+  <data name="&gt;&gt;txB_PercentPartition.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="nUD_CountIteration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>142, 49</value>
+  </data>
+  <data name="nUD_CountIteration.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 20</value>
+  </data>
+  <data name="nUD_CountIteration.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;nUD_CountIteration.Name" xml:space="preserve">
+    <value>nUD_CountIteration</value>
+  </data>
+  <data name="&gt;&gt;nUD_CountIteration.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nUD_CountIteration.Parent" xml:space="preserve">
+    <value>grB_SettingOfProportion</value>
+  </data>
+  <data name="&gt;&gt;nUD_CountIteration.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="grB_SettingOfProportion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 106</value>
+  </data>
+  <data name="grB_SettingOfProportion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>405, 83</value>
+  </data>
+  <data name="grB_SettingOfProportion.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="grB_SettingOfProportion.Text" xml:space="preserve">
+    <value>Налаштування пропорційного розбиття</value>
+  </data>
+  <data name="&gt;&gt;grB_SettingOfProportion.Name" xml:space="preserve">
+    <value>grB_SettingOfProportion</value>
+  </data>
+  <data name="&gt;&gt;grB_SettingOfProportion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grB_SettingOfProportion.Parent" xml:space="preserve">
+    <value>grB_EstimationQualityClassication</value>
+  </data>
+  <data name="&gt;&gt;grB_SettingOfProportion.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="grB_TypePartition.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <data name="rdB_SpecifiedNumber_ofParts.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2185,56 +1423,62 @@
   <data name="&gt;&gt;rdB_SpecifiedProportion.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="grB_CritSelectProperty.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
+  <data name="grB_TypePartition.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 22</value>
   </data>
-  <data name="&gt;&gt;rdB_C4_5.Name" xml:space="preserve">
-    <value>rdB_C4_5</value>
+  <data name="grB_TypePartition.Size" type="System.Drawing.Size, System.Drawing">
+    <value>405, 78</value>
   </data>
-  <data name="&gt;&gt;rdB_C4_5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rdB_C4_5.Parent" xml:space="preserve">
-    <value>grB_CritSelectProperty</value>
-  </data>
-  <data name="&gt;&gt;rdB_C4_5.ZOrder" xml:space="preserve">
+  <data name="grB_TypePartition.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;rdB_CART.Name" xml:space="preserve">
-    <value>rdB_CART</value>
+  <data name="grB_TypePartition.Text" xml:space="preserve">
+    <value>Тип розбиття</value>
   </data>
-  <data name="&gt;&gt;rdB_CART.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;grB_TypePartition.Name" xml:space="preserve">
+    <value>grB_TypePartition</value>
   </data>
-  <data name="&gt;&gt;rdB_CART.Parent" xml:space="preserve">
-    <value>grB_CritSelectProperty</value>
-  </data>
-  <data name="&gt;&gt;rdB_CART.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="grB_CritSelectProperty.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 512</value>
-  </data>
-  <data name="grB_CritSelectProperty.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 74</value>
-  </data>
-  <data name="grB_CritSelectProperty.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="grB_CritSelectProperty.Text" xml:space="preserve">
-    <value>Критерій вибору ознаки</value>
-  </data>
-  <data name="&gt;&gt;grB_CritSelectProperty.Name" xml:space="preserve">
-    <value>grB_CritSelectProperty</value>
-  </data>
-  <data name="&gt;&gt;grB_CritSelectProperty.Type" xml:space="preserve">
+  <data name="&gt;&gt;grB_TypePartition.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;grB_CritSelectProperty.Parent" xml:space="preserve">
-    <value>grB_CreateClassificator</value>
+  <data name="&gt;&gt;grB_TypePartition.Parent" xml:space="preserve">
+    <value>grB_EstimationQualityClassication</value>
   </data>
-  <data name="&gt;&gt;grB_CritSelectProperty.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;grB_TypePartition.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="grB_EstimationQualityClassication.Location" type="System.Drawing.Point, System.Drawing">
+    <value>751, 6</value>
+  </data>
+  <data name="grB_EstimationQualityClassication.Size" type="System.Drawing.Size, System.Drawing">
+    <value>417, 596</value>
+  </data>
+  <data name="grB_EstimationQualityClassication.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="grB_EstimationQualityClassication.Text" xml:space="preserve">
+    <value>Оцінка якості класифікації(результати CV)</value>
+  </data>
+  <data name="grB_EstimationQualityClassication.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;grB_EstimationQualityClassication.Name" xml:space="preserve">
+    <value>grB_EstimationQualityClassication</value>
+  </data>
+  <data name="&gt;&gt;grB_EstimationQualityClassication.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grB_EstimationQualityClassication.Parent" xml:space="preserve">
+    <value>tbP_SelectLearnDataAndAddClassificator</value>
+  </data>
+  <data name="&gt;&gt;grB_EstimationQualityClassication.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="grB_CreateClassificator.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="grB_CritSelectProperty.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
   </data>
   <data name="rdB_C4_5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2290,6 +1534,30 @@
   <data name="&gt;&gt;rdB_CART.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="grB_CritSelectProperty.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 512</value>
+  </data>
+  <data name="grB_CritSelectProperty.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 74</value>
+  </data>
+  <data name="grB_CritSelectProperty.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="grB_CritSelectProperty.Text" xml:space="preserve">
+    <value>Критерій вибору ознаки</value>
+  </data>
+  <data name="&gt;&gt;grB_CritSelectProperty.Name" xml:space="preserve">
+    <value>grB_CritSelectProperty</value>
+  </data>
+  <data name="&gt;&gt;grB_CritSelectProperty.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grB_CritSelectProperty.Parent" xml:space="preserve">
+    <value>grB_CreateClassificator</value>
+  </data>
+  <data name="&gt;&gt;grB_CritSelectProperty.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="lblCountCheckedImsForLearning.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
@@ -2322,54 +1590,6 @@
   </data>
   <data name="grB_UsingLearnData.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
-  </data>
-  <data name="&gt;&gt;rdB_CrossValidation.Name" xml:space="preserve">
-    <value>rdB_CrossValidation</value>
-  </data>
-  <data name="&gt;&gt;rdB_CrossValidation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rdB_CrossValidation.Parent" xml:space="preserve">
-    <value>grB_UsingLearnData</value>
-  </data>
-  <data name="&gt;&gt;rdB_CrossValidation.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;rdB_AllLearnData.Name" xml:space="preserve">
-    <value>rdB_AllLearnData</value>
-  </data>
-  <data name="&gt;&gt;rdB_AllLearnData.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rdB_AllLearnData.Parent" xml:space="preserve">
-    <value>grB_UsingLearnData</value>
-  </data>
-  <data name="&gt;&gt;rdB_AllLearnData.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="grB_UsingLearnData.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 432</value>
-  </data>
-  <data name="grB_UsingLearnData.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 74</value>
-  </data>
-  <data name="grB_UsingLearnData.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="grB_UsingLearnData.Text" xml:space="preserve">
-    <value>Використання навчальних даних</value>
-  </data>
-  <data name="&gt;&gt;grB_UsingLearnData.Name" xml:space="preserve">
-    <value>grB_UsingLearnData</value>
-  </data>
-  <data name="&gt;&gt;grB_UsingLearnData.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grB_UsingLearnData.Parent" xml:space="preserve">
-    <value>grB_CreateClassificator</value>
-  </data>
-  <data name="&gt;&gt;grB_UsingLearnData.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="rdB_CrossValidation.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2424,6 +1644,30 @@
   </data>
   <data name="&gt;&gt;rdB_AllLearnData.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="grB_UsingLearnData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 432</value>
+  </data>
+  <data name="grB_UsingLearnData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 74</value>
+  </data>
+  <data name="grB_UsingLearnData.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="grB_UsingLearnData.Text" xml:space="preserve">
+    <value>Використання навчальних даних</value>
+  </data>
+  <data name="&gt;&gt;grB_UsingLearnData.Name" xml:space="preserve">
+    <value>grB_UsingLearnData</value>
+  </data>
+  <data name="&gt;&gt;grB_UsingLearnData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grB_UsingLearnData.Parent" xml:space="preserve">
+    <value>grB_CreateClassificator</value>
+  </data>
+  <data name="&gt;&gt;grB_UsingLearnData.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="pcB_DemoLearnIm.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2593,6 +1837,57 @@
   <data name="&gt;&gt;cmB_Dimensionalitys.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="grB_CreateClassificator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 6</value>
+  </data>
+  <data name="grB_CreateClassificator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>721, 596</value>
+  </data>
+  <data name="grB_CreateClassificator.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="grB_CreateClassificator.Text" xml:space="preserve">
+    <value>Створення класифікатора</value>
+  </data>
+  <data name="&gt;&gt;grB_CreateClassificator.Name" xml:space="preserve">
+    <value>grB_CreateClassificator</value>
+  </data>
+  <data name="&gt;&gt;grB_CreateClassificator.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grB_CreateClassificator.Parent" xml:space="preserve">
+    <value>tbP_SelectLearnDataAndAddClassificator</value>
+  </data>
+  <data name="&gt;&gt;grB_CreateClassificator.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tbP_SelectLearnDataAndAddClassificator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tbP_SelectLearnDataAndAddClassificator.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tbP_SelectLearnDataAndAddClassificator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1176, 610</value>
+  </data>
+  <data name="tbP_SelectLearnDataAndAddClassificator.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tbP_SelectLearnDataAndAddClassificator.Text" xml:space="preserve">
+    <value>Cтворення нового класифікатора</value>
+  </data>
+  <data name="&gt;&gt;tbP_SelectLearnDataAndAddClassificator.Name" xml:space="preserve">
+    <value>tbP_SelectLearnDataAndAddClassificator</value>
+  </data>
+  <data name="&gt;&gt;tbP_SelectLearnDataAndAddClassificator.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbP_SelectLearnDataAndAddClassificator.Parent" xml:space="preserve">
+    <value>tbC_Main</value>
+  </data>
+  <data name="&gt;&gt;tbP_SelectLearnDataAndAddClassificator.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 300</value>
   </data>
@@ -2700,6 +1995,114 @@
   </data>
   <data name="&gt;&gt;pcB_DemoIm.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="tbP_Classification.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tbP_Classification.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tbP_Classification.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1176, 610</value>
+  </data>
+  <data name="tbP_Classification.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tbP_Classification.Text" xml:space="preserve">
+    <value>Класифікація образів</value>
+  </data>
+  <data name="&gt;&gt;tbP_Classification.Name" xml:space="preserve">
+    <value>tbP_Classification</value>
+  </data>
+  <data name="&gt;&gt;tbP_Classification.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbP_Classification.Parent" xml:space="preserve">
+    <value>tbC_Main</value>
+  </data>
+  <data name="&gt;&gt;tbP_Classification.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="rTB_OutputTree.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="rTB_OutputTree.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Bold</value>
+  </data>
+  <data name="rTB_OutputTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="rTB_OutputTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1170, 604</value>
+  </data>
+  <data name="rTB_OutputTree.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="rTB_OutputTree.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;rTB_OutputTree.Name" xml:space="preserve">
+    <value>rTB_OutputTree</value>
+  </data>
+  <data name="&gt;&gt;rTB_OutputTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rTB_OutputTree.Parent" xml:space="preserve">
+    <value>tbP_OutputTree</value>
+  </data>
+  <data name="&gt;&gt;rTB_OutputTree.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tbP_OutputTree.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tbP_OutputTree.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tbP_OutputTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1176, 610</value>
+  </data>
+  <data name="tbP_OutputTree.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="tbP_OutputTree.Text" xml:space="preserve">
+    <value>Виведення дерева</value>
+  </data>
+  <data name="&gt;&gt;tbP_OutputTree.Name" xml:space="preserve">
+    <value>tbP_OutputTree</value>
+  </data>
+  <data name="&gt;&gt;tbP_OutputTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbP_OutputTree.Parent" xml:space="preserve">
+    <value>tbC_Main</value>
+  </data>
+  <data name="&gt;&gt;tbP_OutputTree.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tbC_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tbC_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tbC_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1184, 636</value>
+  </data>
+  <data name="tbC_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tbC_Main.Name" xml:space="preserve">
+    <value>tbC_Main</value>
+  </data>
+  <data name="&gt;&gt;tbC_Main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbC_Main.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tbC_Main.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="oFD_Loader.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

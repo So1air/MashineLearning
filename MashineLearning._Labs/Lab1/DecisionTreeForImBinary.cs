@@ -10,6 +10,16 @@ namespace MashineLearning.Classification
             CART,
             C4_5
         }
+        public struct InfoOfComponentTree
+        {
+            public readonly string Content;
+            public readonly uint Depth;
+            public InfoOfComponentTree(string cnt, uint dpt)
+            {
+                Content = cnt;
+                Depth = dpt;
+            }
+        }
 
         private abstract class ComponentTree
         {
@@ -55,11 +65,33 @@ namespace MashineLearning.Classification
 
         private ComponentTree _mainTree;
         private List<uint> _numbersImportantProps = new List<uint>();
+        //private List<uint> _depths = new List<uint>();
+        private List<InfoOfComponentTree> _infoOfTree = new List<InfoOfComponentTree>();
+
+        
         public readonly MethodBuild MethodBuildTree;// { public get; protected set; } 
 
         public uint[] NumbersImportantProps
         {
             get { return _numbersImportantProps.ToArray(); }
+        }
+
+        public InfoOfComponentTree[] InfoOfTree
+        {
+            get { return _infoOfTree.ToArray(); }
+        }
+
+        public string GetInfoStringAboutTree()
+        {
+            string result = _infoOfTree[0].Content;            
+            for (int i = 1, n = _infoOfTree.Count; i < n; i++)
+            {
+                result += "\n";
+                for(uint j = 0, dpt = _infoOfTree[i].Depth; j < dpt; j++, result += " ");
+                result += _infoOfTree[i].Depth.ToString() + ":";
+                result += _infoOfTree[i].Content;
+            }
+            return result;
         }
 
         public override string Classificate(ImBinary im)
@@ -70,18 +102,30 @@ namespace MashineLearning.Classification
                 return null;
         }
 
-        private ComponentTree BuildTree(LearnSetOfImBinarys learn_dataSet, List<uint> numbersImpProps)
+        private ComponentTree BuildTree(LearnSetOfImBinarys learn_dataSet, List<uint> numbersImpProps, uint curr_depth)
         {
             if (learn_dataSet.Types.Length == 1)
+            {
+                _infoOfTree.Add(new InfoOfComponentTree(learn_dataSet.Types[0], curr_depth)); 
                 return new Leaf(learn_dataSet.Types[0]);
+            }
 
             if (numbersImpProps.Count == 1)
             {                
-                _numbersImportantProps.Add(numbersImpProps[0]);
+                _numbersImportantProps.Add(numbersImpProps[0]);                    
+                _infoOfTree.Add(new InfoOfComponentTree(numbersImpProps[0].ToString(), curr_depth++));
                 if (learn_dataSet.ImBinarys[0].GetProp(numbersImpProps[0]) == 0)
+                {
+                    _infoOfTree.Add(new InfoOfComponentTree(learn_dataSet.Types[0], curr_depth));
+                    _infoOfTree.Add(new InfoOfComponentTree(learn_dataSet.Types[1], curr_depth));
                     return new Decision(numbersImpProps[0], new Leaf(learn_dataSet.Types[0]), new Leaf(learn_dataSet.Types[1]));
+                }
                 else
+                {
+                    _infoOfTree.Add(new InfoOfComponentTree(learn_dataSet.Types[1], curr_depth));
+                    _infoOfTree.Add(new InfoOfComponentTree(learn_dataSet.Types[0], curr_depth));
                     return new Decision(numbersImpProps[0], new Leaf(learn_dataSet.Types[1]), new Leaf(learn_dataSet.Types[0]));
+                }
             }
 
             ImBinary[] allIm = learn_dataSet.ImBinarys;
@@ -142,7 +186,8 @@ namespace MashineLearning.Classification
             }
             _numbersImportantProps.Add(greatImportantProp);
             numbersImpProps.Remove(greatImportantProp);
-            return new Decision(greatImportantProp, BuildTree(s0, numbersImpProps.GetRange(0, numbersImpProps.Count)), BuildTree(s1, numbersImpProps.GetRange(0, numbersImpProps.Count)));
+            _infoOfTree.Add(new InfoOfComponentTree(greatImportantProp.ToString(), curr_depth));
+            return new Decision(greatImportantProp, BuildTree(s0, numbersImpProps.GetRange(0, numbersImpProps.Count), ++curr_depth), BuildTree(s1, numbersImpProps.GetRange(0, numbersImpProps.Count), curr_depth));
         }
         
         #region CART
@@ -209,7 +254,7 @@ namespace MashineLearning.Classification
             for(uint i = 0, count_props =  (uint)(learn_dataSet.HeightIm * learn_dataSet.WidthIm); i < count_props; i++)
                 numbersImpProps.Add(i);
             this.MethodBuildTree = mBuildTree;
-            _mainTree = BuildTree(learn_dataSet, numbersImpProps);
+            _mainTree = BuildTree(learn_dataSet, numbersImpProps, 0);
         }
     }
 }

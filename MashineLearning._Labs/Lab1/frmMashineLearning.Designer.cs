@@ -68,13 +68,14 @@
             this.pcB_Image = new System.Windows.Forms.PictureBox();
             this.tbP_SelectLearnDataAndAddClassificator = new System.Windows.Forms.TabPage();
             this.grB_EstimationQualityClassication = new System.Windows.Forms.GroupBox();
+            this.lblMaxEstim = new System.Windows.Forms.Label();
+            this.txB_CountParts = new System.Windows.Forms.TextBox();
             this.dGV_ResultCrossValidation = new System.Windows.Forms.DataGridView();
             this.colDGV_Iteration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.сolDGV_PercentCorrectClassific = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblCountParts = new System.Windows.Forms.Label();
             this.grB_SettingOfProportion = new System.Windows.Forms.GroupBox();
             this.lblPercentPartition = new System.Windows.Forms.Label();
-            this.txB_CountParts = new System.Windows.Forms.TextBox();
             this.lblCountIteration = new System.Windows.Forms.Label();
             this.txB_PercentPartition = new System.Windows.Forms.TextBox();
             this.nUD_CountIteration = new System.Windows.Forms.NumericUpDown();
@@ -102,7 +103,8 @@
             this.pcB_DemoIm = new System.Windows.Forms.PictureBox();
             this.oFD_Loader = new System.Windows.Forms.OpenFileDialog();
             this.sFD_Saver = new System.Windows.Forms.SaveFileDialog();
-            this.lblMaxEstim = new System.Windows.Forms.Label();
+            this.tbP_OutputTree = new System.Windows.Forms.TabPage();
+            this.rTB_OutputTree = new System.Windows.Forms.RichTextBox();
             this.tbC_Main.SuspendLayout();
             this.tbP_LearnAndTestImages.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUD_ColCount)).BeginInit();
@@ -125,6 +127,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcB_DemoLearnIm)).BeginInit();
             this.tbP_Classification.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcB_DemoIm)).BeginInit();
+            this.tbP_OutputTree.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbC_Main
@@ -132,6 +135,7 @@
             this.tbC_Main.Controls.Add(this.tbP_LearnAndTestImages);
             this.tbC_Main.Controls.Add(this.tbP_SelectLearnDataAndAddClassificator);
             this.tbC_Main.Controls.Add(this.tbP_Classification);
+            this.tbC_Main.Controls.Add(this.tbP_OutputTree);
             resources.ApplyResources(this.tbC_Main, "tbC_Main");
             this.tbC_Main.Name = "tbC_Main";
             this.tbC_Main.SelectedIndex = 0;
@@ -476,6 +480,18 @@
             this.grB_EstimationQualityClassication.Name = "grB_EstimationQualityClassication";
             this.grB_EstimationQualityClassication.TabStop = false;
             // 
+            // lblMaxEstim
+            // 
+            resources.ApplyResources(this.lblMaxEstim, "lblMaxEstim");
+            this.lblMaxEstim.Name = "lblMaxEstim";
+            // 
+            // txB_CountParts
+            // 
+            resources.ApplyResources(this.txB_CountParts, "txB_CountParts");
+            this.txB_CountParts.Name = "txB_CountParts";
+            this.txB_CountParts.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txB_CountParts_KeyDown);
+            this.txB_CountParts.Validated += new System.EventHandler(this.txB_CountParts_Validated);
+            // 
             // dGV_ResultCrossValidation
             // 
             this.dGV_ResultCrossValidation.AllowUserToAddRows = false;
@@ -528,13 +544,6 @@
             // 
             resources.ApplyResources(this.lblPercentPartition, "lblPercentPartition");
             this.lblPercentPartition.Name = "lblPercentPartition";
-            // 
-            // txB_CountParts
-            // 
-            resources.ApplyResources(this.txB_CountParts, "txB_CountParts");
-            this.txB_CountParts.Name = "txB_CountParts";
-            this.txB_CountParts.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txB_CountParts_KeyDown);
-            this.txB_CountParts.Validated += new System.EventHandler(this.txB_CountParts_Validated);
             // 
             // lblCountIteration
             // 
@@ -749,10 +758,20 @@
             resources.ApplyResources(this.sFD_Saver, "sFD_Saver");
             this.sFD_Saver.InitialDirectory = ".";
             // 
-            // lblMaxEstim
+            // tbP_OutputTree
             // 
-            resources.ApplyResources(this.lblMaxEstim, "lblMaxEstim");
-            this.lblMaxEstim.Name = "lblMaxEstim";
+            this.tbP_OutputTree.Controls.Add(this.rTB_OutputTree);
+            resources.ApplyResources(this.tbP_OutputTree, "tbP_OutputTree");
+            this.tbP_OutputTree.Name = "tbP_OutputTree";
+            this.tbP_OutputTree.UseVisualStyleBackColor = true;
+            // 
+            // rTB_OutputTree
+            // 
+            this.rTB_OutputTree.BackColor = System.Drawing.SystemColors.HighlightText;
+            resources.ApplyResources(this.rTB_OutputTree, "rTB_OutputTree");
+            this.rTB_OutputTree.ForeColor = System.Drawing.Color.Black;
+            this.rTB_OutputTree.Name = "rTB_OutputTree";
+            this.rTB_OutputTree.ReadOnly = true;
             // 
             // frmMashineLearning
             // 
@@ -793,6 +812,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcB_DemoLearnIm)).EndInit();
             this.tbP_Classification.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcB_DemoIm)).EndInit();
+            this.tbP_OutputTree.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -873,6 +893,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblMaxEstim;
+        private System.Windows.Forms.TabPage tbP_OutputTree;
+        private System.Windows.Forms.RichTextBox rTB_OutputTree;
     }
 }
 

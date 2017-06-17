@@ -697,6 +697,9 @@ namespace MashineLearning.Classification
                     _classificators.Add(_currClassificator = newClassificator);
                     lblStatusCreateClassificator.ForeColor = Color.LimeGreen;
                     lblStatusCreateClassificator.Text = _classificators.Count + "-й класифікатор успішно створено.";
+                    //rTB_OutputTree.Clear();
+                    //rTB_OutputTree.Text = _currClassificator.GetInfoStringAboutTree();
+                    OutputTree();
                 }
                 else
                 {
@@ -761,6 +764,53 @@ namespace MashineLearning.Classification
         private void rdB_CART_CheckedChanged(object sender, EventArgs e)
         {
             _critSelectProp = (rdB_CART.Checked ? DecisionTreeForImBinary.MethodBuild.CART : DecisionTreeForImBinary.MethodBuild.C4_5);
+        }
+
+        private Color ColorsComponentTree(uint i)
+        {
+            switch (i % 7)
+            {
+                case 0:
+                    return Color.Yellow;
+                case 1:
+                    return Color.LimeGreen;
+                case 2:
+                    return Color.OrangeRed;
+                case 3:
+                    return Color.Navy;
+                case 4:
+                    return Color.SaddleBrown;
+                case 5:
+                    return Color.Orchid;
+                case 6:
+                    return Color.Navy;
+                default:
+                    throw new Exception();
+            }            
+        }
+
+        private void OutputTree()
+        {
+            if (_currClassificator != null)
+            {
+                DecisionTreeForImBinary.InfoOfComponentTree[] nodes = _currClassificator.InfoOfTree;
+                rTB_OutputTree.Clear();
+                rTB_OutputTree.Text = nodes[0].Content;
+                int selectionStart = 0;
+                for (int i = 1, n = nodes.Length; i < n; i++)
+                {
+                    rTB_OutputTree.Text += "\n";                    
+                    for (uint j = 0, dpt = 2 * nodes[i].Depth; j < dpt; j++, rTB_OutputTree.Text += " ") ;
+                    rTB_OutputTree.Text += nodes[i].Depth.ToString() + ":";
+                    rTB_OutputTree.Text += nodes[i].Content;
+                }
+                for (int i = 0, n = nodes.Length; i < n; i++)
+                {
+                    selectionStart = rTB_OutputTree.GetFirstCharIndexFromLine(i);
+                    rTB_OutputTree.Select(selectionStart, rTB_OutputTree.Lines[i].Length);
+                    rTB_OutputTree.SelectionColor = ColorsComponentTree(nodes[i].Depth);
+                }
+            }
         }
     }
 }
