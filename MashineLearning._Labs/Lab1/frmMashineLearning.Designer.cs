@@ -101,10 +101,10 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pcB_DemoIm = new System.Windows.Forms.PictureBox();
-            this.oFD_Loader = new System.Windows.Forms.OpenFileDialog();
-            this.sFD_Saver = new System.Windows.Forms.SaveFileDialog();
             this.tbP_OutputTree = new System.Windows.Forms.TabPage();
             this.rTB_OutputTree = new System.Windows.Forms.RichTextBox();
+            this.oFD_Loader = new System.Windows.Forms.OpenFileDialog();
+            this.sFD_Saver = new System.Windows.Forms.SaveFileDialog();
             this.tbC_Main.SuspendLayout();
             this.tbP_LearnAndTestImages.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUD_ColCount)).BeginInit();
@@ -746,18 +746,6 @@
             this.pcB_DemoIm.Name = "pcB_DemoIm";
             this.pcB_DemoIm.TabStop = false;
             // 
-            // oFD_Loader
-            // 
-            this.oFD_Loader.DefaultExt = "txt";
-            resources.ApplyResources(this.oFD_Loader, "oFD_Loader");
-            this.oFD_Loader.InitialDirectory = ".";
-            // 
-            // sFD_Saver
-            // 
-            this.sFD_Saver.DefaultExt = "txt";
-            resources.ApplyResources(this.sFD_Saver, "sFD_Saver");
-            this.sFD_Saver.InitialDirectory = ".";
-            // 
             // tbP_OutputTree
             // 
             this.tbP_OutputTree.Controls.Add(this.rTB_OutputTree);
@@ -772,6 +760,18 @@
             this.rTB_OutputTree.ForeColor = System.Drawing.Color.Black;
             this.rTB_OutputTree.Name = "rTB_OutputTree";
             this.rTB_OutputTree.ReadOnly = true;
+            // 
+            // oFD_Loader
+            // 
+            this.oFD_Loader.DefaultExt = "txt";
+            resources.ApplyResources(this.oFD_Loader, "oFD_Loader");
+            this.oFD_Loader.InitialDirectory = ".";
+            // 
+            // sFD_Saver
+            // 
+            this.sFD_Saver.DefaultExt = "txt";
+            resources.ApplyResources(this.sFD_Saver, "sFD_Saver");
+            this.sFD_Saver.InitialDirectory = ".";
             // 
             // frmMashineLearning
             // 

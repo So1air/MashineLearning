@@ -19,3 +19,15 @@ E:\Git Local Repo\Методи обробки та візуалізації ба
 E:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\bin\Debug\uk-UA\Lab1.resources.dll
 E:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\MashineLearning.Classification.frmMashineLearning.uk-UA.resources
 E:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\uk-UA\Lab1.resources.dll
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\bin\Debug\Lab1.exe.config
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\Lab1.exe
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\Lab1.pdb
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\bin\Debug\Lab1.exe
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\bin\Debug\Lab1.pdb
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\bin\Debug\uk-UA\Lab1.resources.dll
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\Classification.csprojResolveAssemblyReference.cache
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\MashineLearning.Classification.frmMashineLearning.resources
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\MashineLearning.Classification.Properties.Resources.resources
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\MashineLearning.Classification.frmMashineLearning.uk-UA.resources
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\Classification.csproj.GenerateResource.Cache
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Lab1\obj\Debug\uk-UA\Lab1.resources.dll

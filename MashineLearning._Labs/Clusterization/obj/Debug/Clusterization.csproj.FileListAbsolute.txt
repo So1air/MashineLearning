@@ -1,0 +1,9 @@
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Clusterization\bin\Debug\Clusterization.exe.config
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Clusterization\obj\Debug\Clusterization.csprojResolveAssemblyReference.cache
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Clusterization\obj\Debug\MashineLearning.Clusterization.frmMashineLearning.resources
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Clusterization\obj\Debug\Clusterization.Properties.Resources.resources
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Clusterization\obj\Debug\Clusterization.csproj.GenerateResource.Cache
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Clusterization\bin\Debug\Clusterization.exe
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Clusterization\bin\Debug\Clusterization.pdb
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Clusterization\obj\Debug\Clusterization.exe
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Clusterization\obj\Debug\Clusterization.pdb
