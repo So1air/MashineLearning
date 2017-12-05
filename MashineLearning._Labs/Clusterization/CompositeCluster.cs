@@ -5,8 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MashineLearning.Clusterization
-{
-    //не готов
+{    
     class CompositeCluster: ClusterizationTreeImBinary
     {
         private ClusterizationTreeImBinary _leftCl;

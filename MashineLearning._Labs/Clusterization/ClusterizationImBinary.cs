@@ -26,7 +26,7 @@ namespace MashineLearning.Clusterization
     static class ClusterizationImBinary
     {
         static Random accidenceFactor = new Random();
-        public static DendrogramInfo HierarchicalAgglomerativeMethod(ImBinary[] objects, TypeOfInterclusterDistance tdist = TypeOfInterclusterDistance.CompleteLinkage) //отладить
+        public static DendrogramInfo HierarchicalAgglomerativeMethod(ImBinary[] objects, TypeOfInterclusterDistance tdist = TypeOfInterclusterDistance.CompleteLinkage) 
         {
             List<ClusterizationTreeImBinary> buildList = new List<ClusterizationTreeImBinary>();  //список всех построенных кластеров, все листья ElementaryCluster и узлы, располженные в порядке возрастания расстояния, CompositeCluster
             List<Dictionary<int, int>> tableOfDistances = new List<Dictionary<int, int>>();
@@ -175,102 +175,143 @@ namespace MashineLearning.Clusterization
             return new DendrogramInfo(buildList);            
         }
 
-        public static ClusterSeparationImBinary KmeansByLloyd(ImBinary[] objects, uint K) //улучшить
+        public static ClusterSeparationImBinary KmeansByLloyd(ImBinary[] objects, uint K, int amongTryImproveResult = 7) //отладить
         {
+            if (amongTryImproveResult < 1)
+                amongTryImproveResult = 7;
             ImBinary[] centersClusters_old = new ImBinary[K],
                        centersClusters_curr = new ImBinary[K];
-            SortedSet<int> index_centers = new SortedSet<int>();
-            ClusterSeparationImBinary result = new ClusterSeparationImBinary(K);
+            double minValueFunctional = double.PositiveInfinity, valueFunctional;
+            ClusterSeparationImBinary best_result = null, result;
 
-            do
-            {
-                index_centers.Add(accidenceFactor.Next(objects.Length - 1));
-            } while (index_centers.Count != K); //К центров будет тогда, когда получим К разных индексов
-
-            for (int i = 0; i < K; i++)
-            {
-                centersClusters_old[i] = objects[index_centers.ElementAt<int>(i)]; //заполняем центры
-                result.separation[i] = new ClusterImBinary("Cluster" + i);
-            }
-
+            SortedSet<int> index_centers;
             bool stabilization;
             int countIteration = 0;
             int index_center_for_join, min_distance, tmp_distance;
-            int min_diff = (int)(0.05 * objects[0].Size);
-            
-            do 
+            for (int numTryImproveResult = 0; numTryImproveResult < amongTryImproveResult; numTryImproveResult++)
             {
-                countIteration++;
-                for (int i = 0, n = objects.Length; i < n; i++)
-                {
-                    index_center_for_join = 0;
-                    min_distance = objects[i].DistanceTo(centersClusters_old[0]);                    
-                    for(int h = 1; h < K; h++)
-                        if ((tmp_distance = objects[i].DistanceTo(centersClusters_old[h])) < min_distance)
-                        {
-                            index_center_for_join = h;
-                            min_distance = tmp_distance;
-                        }
-                    result.separation[index_center_for_join].AddObject(objects[i]);
-                }
-                stabilization = true;
-                for (int h = 0; h < K; h++)
-                    if (centersClusters_old[h].DistanceTo(centersClusters_curr[h] = result.separation[h].GetCenter()) > min_diff)
-                        stabilization = false;
-                 centersClusters_curr.CopyTo(centersClusters_old, 0);
-            } 
-            while (!stabilization && (countIteration < 50));
+                index_centers = new SortedSet<int>();
+                result = new ClusterSeparationImBinary(objects[0].RowCount, objects[0].ColumnCount, K);
 
-            return result;
+                do
+                {
+                    index_centers.Add(accidenceFactor.Next(objects.Length - 1));
+                } while (index_centers.Count != K); //К центров будет тогда, когда получим К разных индексов
+
+                for (int i = 0; i < K; i++)
+                {
+                    centersClusters_old[i] = objects[index_centers.ElementAt<int>(i)]; //заполняем центры
+                    result.Separation[i] = new ClusterImBinary("Cluster" + i);
+                }
+            
+                countIteration = 0;            
+                //int min_diff = (int)(0.05 * objects[0].Size);            
+                do 
+                {
+                    countIteration++;
+                    for (int j = 0; j < K; j++)
+                    {
+                        result.Separation[j].Clear();
+                        result.Separation[j].AddObject(centersClusters_old[j]);
+                    }
+                    for (int i = 0, n = objects.Length; i < n; i++)
+                    {
+                        index_center_for_join = 0;
+                        min_distance = objects[i].DistanceTo(centersClusters_old[0]);                    
+                        for(int h = 1; h < K; h++)
+                            if ((tmp_distance = objects[i].DistanceTo(centersClusters_old[h])) < min_distance)
+                            {
+                                index_center_for_join = h;
+                                min_distance = tmp_distance;
+                            }
+                        result.Separation[index_center_for_join].AddObject(objects[i]);
+                    }
+                    stabilization = true;
+                    for (int h = 0; h < K; h++)
+                        if (centersClusters_old[h].DistanceTo(centersClusters_curr[h] = result.Separation[h].GetCenter()) > 0/*min_diff*/)
+                            stabilization = false;
+                     centersClusters_curr.CopyTo(centersClusters_old, 0);
+                } 
+                while (!stabilization && (countIteration < 50));
+
+                if ((valueFunctional = result.FunctionalForK_means) < minValueFunctional)
+                {
+                    best_result = result;
+                    minValueFunctional = valueFunctional;
+                }
+
+            }
+
+            return best_result;
         }
 
-        public static ClusterSeparationImBinary KmeansByMacQueen(ImBinary[] objects, uint K) //улучшить
+        public static ClusterSeparationImBinary KmeansByMacQueen(ImBinary[] objects, uint K, int amongTryImproveResult = 7) //отладить
         {
+            if (amongTryImproveResult < 1)
+                amongTryImproveResult = 7;
             ImBinary[] centersClusters_old = new ImBinary[K],
                        centersClusters_curr = new ImBinary[K];
-            SortedSet<int> index_centers = new SortedSet<int>();
-            ClusterSeparationImBinary result = new ClusterSeparationImBinary(K);
+            double minValueFunctional = double.PositiveInfinity, valueFunctional;
+            ClusterSeparationImBinary best_result = null, result;
 
-            do
-            {
-                index_centers.Add(accidenceFactor.Next(objects.Length - 1));
-            } while (index_centers.Count != K); //К центров будет тогда, когда получим К разных индексов
-
-            for (int i = 0; i < K; i++)
-            {
-                centersClusters_curr[i] = centersClusters_old[i] = objects[index_centers.ElementAt<int>(i)]; //заполняем центры
-                result.separation[i] = new ClusterImBinary("Cluster" + i);
-            }
-
+            SortedSet<int> index_centers;
             bool stabilization;
             int countIteration = 0;
             int index_center_for_join, min_distance, tmp_distance;
-            int min_diff = (int)(0.05 * objects[0].Size);
-            do
+            for (int numTryImproveResult = 0; numTryImproveResult < amongTryImproveResult; numTryImproveResult++)
             {
-                countIteration++;
-                for (int i = 0, n = objects.Length; i < n; i++)
-                {
-                    index_center_for_join = 0;
-                    min_distance = objects[i].DistanceTo(centersClusters_curr[0]);
-                    for (int h = 1; h < K; h++)
-                        if ((tmp_distance = objects[i].DistanceTo(centersClusters_curr[h])) < min_distance)
-                        {
-                            index_center_for_join = h;
-                            min_distance = tmp_distance;
-                        }
-                    result.separation[index_center_for_join].AddObject(objects[i]);
-                    centersClusters_curr[index_center_for_join] = result.separation[index_center_for_join].GetCenter();
-                }
-                stabilization = true;
-                for (int h = 0; h < K; h++)
-                    if (centersClusters_old[h].DistanceTo(centersClusters_curr[h]) > min_diff)
-                        stabilization = false;
-                centersClusters_curr.CopyTo(centersClusters_old, 0);
-            }
-            while (!stabilization && (countIteration < 50));
+                index_centers = new SortedSet<int>();
+                result = new ClusterSeparationImBinary(objects[0].RowCount, objects[0].ColumnCount, K);
 
-            return result;
+                do
+                {
+                    index_centers.Add(accidenceFactor.Next(objects.Length - 1));
+                } while (index_centers.Count != K); //К центров будет тогда, когда получим К РАЗНЫХ индексов
+
+                for (int i = 0; i < K; i++)
+                {
+                    centersClusters_curr[i] = centersClusters_old[i] = objects[index_centers.ElementAt<int>(i)]; //заполняем центры
+                    result.Separation[i] = new ClusterImBinary("Cluster" + i);
+                }
+               
+                countIteration = 0;                
+                //int min_diff = (int)(0.05 * objects[0].Size);
+                do
+                {
+                    countIteration++;
+                    for (int j = 0; j < K; j++)
+                        result.Separation[j].Clear();
+                    for (int i = 0, n = objects.Length; i < n; i++)
+                    {
+                        index_center_for_join = 0;
+                        min_distance = objects[i].DistanceTo(centersClusters_curr[0]);
+                        for (int h = 1; h < K; h++)
+                            if ((tmp_distance = objects[i].DistanceTo(centersClusters_curr[h])) < min_distance)
+                            {
+                                index_center_for_join = h;
+                                min_distance = tmp_distance;
+                            }
+                        result.Separation[index_center_for_join].AddObject(objects[i]);
+                        centersClusters_curr[index_center_for_join] = result.Separation[index_center_for_join].GetCenter();
+                    }
+                    stabilization = true;
+                    for (int h = 0; h < K; h++)
+                        if (centersClusters_old[h].DistanceTo(centersClusters_curr[h]) > 0/*min_diff*/)
+                            stabilization = false;
+                    for (int j = 0; j < K; j++)
+                        result.Separation[j].AddObject(centersClusters_curr[j]);
+                    centersClusters_curr.CopyTo(centersClusters_old, 0);
+                }
+                while (!stabilization && (countIteration < 50));
+
+                if ((valueFunctional = result.FunctionalForK_means) < minValueFunctional)
+                {
+                    best_result = result;
+                    minValueFunctional = valueFunctional;
+                }
+            }
+
+            return best_result;
         }
 
         public static ClusterSeparationImBinary FOREL2(ImBinary[] objects, uint K)//содержит ошибку
@@ -295,28 +336,28 @@ namespace MashineLearning.Clusterization
                 else
                     R += dR;
                 tmpStoreObjects = new List<ImBinary>(objects);
-                result = new ClusterSeparationImBinary(K);
+                result = new ClusterSeparationImBinary(objects[0].RowCount, objects[0].ColumnCount, K);
                 for (int i = 0; (i < K) && (tmpStoreObjects.Count > 0); i++)
                 {
                     centerCluster_next = tmpStoreObjects[accidenceFactor.Next(tmpStoreObjects.Count - 1)];
-                    result.separation[i] = new ClusterImBinary("Cluster " + i);
+                    result.Separation[i] = new ClusterImBinary("Cluster " + i);
                     do
                     {
-                        result.separation[i].Clear();
+                        result.Separation[i].Clear();
                         centerCluster = centerCluster_next;
                         for (int j = 0; j < tmpStoreObjects.Count; j++)
                             if (centerCluster.DistanceTo(tmpStoreObjects[j]) <= R)
                             {
-                                result.separation[i].AddObject(tmpStoreObjects[j]);
+                                result.Separation[i].AddObject(tmpStoreObjects[j]);
                                 tmpStoreObjects.RemoveAt(j);
                                 j--;
                             }
-                        centerCluster_next = result.separation[i].GetCenter();            //почему-то возникает пустой кластер. Как???
+                        centerCluster_next = result.Separation[i].GetCenter();            //почему-то возникает пустой кластер. Как???
                     }
                     while (centerCluster.DistanceTo(centerCluster_next) != 0);
                 }
             }
-            while ((dR > min_diff) && (tmpStoreObjects.Count != 0) && (result.separation[K - 1] == null));
+            while ((dR > min_diff) && (tmpStoreObjects.Count != 0) && (result.Separation[K - 1] == null));
 
             return result;
         }

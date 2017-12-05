@@ -1,0 +1,10 @@
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Correlation_and_Regression\bin\Debug\Correlation_and_Regression.exe.config
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Correlation_and_Regression\bin\Debug\Correlation_and_Regression.exe
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Correlation_and_Regression\bin\Debug\Correlation_and_Regression.pdb
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Correlation_and_Regression\obj\Debug\Correlation_and_Regression.frmRegression.resources
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Correlation_and_Regression\obj\Debug\Correlation_and_Regression.Properties.Resources.resources
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Correlation_and_Regression\obj\Debug\Correlation_and_Regression.csproj.GenerateResource.Cache
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Correlation_and_Regression\obj\Debug\Correlation_and_Regression.exe
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Correlation_and_Regression\obj\Debug\Correlation_and_Regression.pdb
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Correlation_and_Regression\bin\Debug\LibraryOfQuantiles.dll
+D:\Git Local Repo\Методи обробки та візуалізації багатовимірних даних\MashineLearning._Labs\Correlation_and_Regression\obj\Debug\Correlation_and_Regression.csprojResolveAssemblyReference.cache

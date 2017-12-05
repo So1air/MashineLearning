@@ -61,6 +61,12 @@
             this.tbP_ResultsClusterization = new System.Windows.Forms.TabPage();
             this.tbC_Results = new System.Windows.Forms.TabControl();
             this.tbP_Dendrogram = new System.Windows.Forms.TabPage();
+            this.dGV_SequenceObjectsInDendrogram = new System.Windows.Forms.DataGridView();
+            this.clnNumObj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnObj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblInterclusterDistance = new System.Windows.Forms.Label();
+            this.btnCreateSeparationFromSection = new System.Windows.Forms.Button();
+            this.nUD_InterclusterDistance = new System.Windows.Forms.NumericUpDown();
             this.chtDendrogram = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tbP_Predetermined_number_of_clusters = new System.Windows.Forms.TabPage();
             this.lblFunctionals = new System.Windows.Forms.Label();
@@ -82,6 +88,8 @@
             this.tbP_ResultsClusterization.SuspendLayout();
             this.tbC_Results.SuspendLayout();
             this.tbP_Dendrogram.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dGV_SequenceObjectsInDendrogram)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUD_InterclusterDistance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chtDendrogram)).BeginInit();
             this.tbP_Predetermined_number_of_clusters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcB_ViewObject)).BeginInit();
@@ -178,7 +186,7 @@
             this.cLB_Objects.FormattingEnabled = true;
             this.cLB_Objects.Location = new System.Drawing.Point(23, 57);
             this.cLB_Objects.Name = "cLB_Objects";
-            this.cLB_Objects.Size = new System.Drawing.Size(235, 364);
+            this.cLB_Objects.Size = new System.Drawing.Size(235, 379);
             this.cLB_Objects.TabIndex = 1;
             this.cLB_Objects.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cLB_Objects_MouseClick);
             this.cLB_Objects.SelectedIndexChanged += new System.EventHandler(this.cLB_Objects_SelectedIndexChanged);
@@ -187,6 +195,8 @@
             // 
             // cmB_Dimensionality
             // 
+            this.cmB_Dimensionality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmB_Dimensionality.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmB_Dimensionality.FormattingEnabled = true;
             this.cmB_Dimensionality.Location = new System.Drawing.Point(23, 30);
             this.cmB_Dimensionality.Name = "cmB_Dimensionality";
@@ -217,7 +227,7 @@
             this.txB_CountClusters.Name = "txB_CountClusters";
             this.txB_CountClusters.Size = new System.Drawing.Size(100, 20);
             this.txB_CountClusters.TabIndex = 9;
-            this.txB_CountClusters.Text = "10";
+            this.txB_CountClusters.Text = "8";
             this.txB_CountClusters.Visible = false;
             this.txB_CountClusters.Validated += new System.EventHandler(this.txB_CountClusters_Validated);
             // 
@@ -418,6 +428,10 @@
             // 
             // tbP_Dendrogram
             // 
+            this.tbP_Dendrogram.Controls.Add(this.dGV_SequenceObjectsInDendrogram);
+            this.tbP_Dendrogram.Controls.Add(this.lblInterclusterDistance);
+            this.tbP_Dendrogram.Controls.Add(this.btnCreateSeparationFromSection);
+            this.tbP_Dendrogram.Controls.Add(this.nUD_InterclusterDistance);
             this.tbP_Dendrogram.Controls.Add(this.chtDendrogram);
             this.tbP_Dendrogram.Location = new System.Drawing.Point(4, 22);
             this.tbP_Dendrogram.Name = "tbP_Dendrogram";
@@ -426,6 +440,64 @@
             this.tbP_Dendrogram.TabIndex = 0;
             this.tbP_Dendrogram.Text = "Дендрогама";
             this.tbP_Dendrogram.UseVisualStyleBackColor = true;
+            // 
+            // dGV_SequenceObjectsInDendrogram
+            // 
+            this.dGV_SequenceObjectsInDendrogram.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dGV_SequenceObjectsInDendrogram.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dGV_SequenceObjectsInDendrogram.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGV_SequenceObjectsInDendrogram.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clnNumObj,
+            this.clnObj});
+            this.dGV_SequenceObjectsInDendrogram.Location = new System.Drawing.Point(987, 103);
+            this.dGV_SequenceObjectsInDendrogram.Name = "dGV_SequenceObjectsInDendrogram";
+            this.dGV_SequenceObjectsInDendrogram.RowHeadersVisible = false;
+            this.dGV_SequenceObjectsInDendrogram.Size = new System.Drawing.Size(155, 373);
+            this.dGV_SequenceObjectsInDendrogram.TabIndex = 4;
+            this.dGV_SequenceObjectsInDendrogram.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV_SequenceObjectsInDendrogram_CellContentClick);
+            // 
+            // clnNumObj
+            // 
+            this.clnNumObj.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.clnNumObj.HeaderText = "№ з/п";
+            this.clnNumObj.Name = "clnNumObj";
+            this.clnNumObj.Width = 50;
+            // 
+            // clnObj
+            // 
+            this.clnObj.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clnObj.HeaderText = "Об\'єкт";
+            this.clnObj.Name = "clnObj";
+            // 
+            // lblInterclusterDistance
+            // 
+            this.lblInterclusterDistance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblInterclusterDistance.AutoSize = true;
+            this.lblInterclusterDistance.Location = new System.Drawing.Point(996, 18);
+            this.lblInterclusterDistance.Name = "lblInterclusterDistance";
+            this.lblInterclusterDistance.Size = new System.Drawing.Size(139, 13);
+            this.lblInterclusterDistance.TabIndex = 3;
+            this.lblInterclusterDistance.Text = "Відстань між кластерами:";
+            // 
+            // btnCreateSeparationFromSection
+            // 
+            this.btnCreateSeparationFromSection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCreateSeparationFromSection.Location = new System.Drawing.Point(987, 60);
+            this.btnCreateSeparationFromSection.Name = "btnCreateSeparationFromSection";
+            this.btnCreateSeparationFromSection.Size = new System.Drawing.Size(155, 26);
+            this.btnCreateSeparationFromSection.TabIndex = 2;
+            this.btnCreateSeparationFromSection.Text = "Сформувати переріз";
+            this.btnCreateSeparationFromSection.UseVisualStyleBackColor = true;
+            this.btnCreateSeparationFromSection.Click += new System.EventHandler(this.btnCreateSeparationFromSection_Click);
+            // 
+            // nUD_InterclusterDistance
+            // 
+            this.nUD_InterclusterDistance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.nUD_InterclusterDistance.Location = new System.Drawing.Point(987, 34);
+            this.nUD_InterclusterDistance.Name = "nUD_InterclusterDistance";
+            this.nUD_InterclusterDistance.Size = new System.Drawing.Size(155, 20);
+            this.nUD_InterclusterDistance.TabIndex = 1;
             // 
             // chtDendrogram
             // 
@@ -454,6 +526,7 @@
             this.chtDendrogram.ChartAreas.Add(chartArea1);
             this.chtDendrogram.Location = new System.Drawing.Point(6, 6);
             this.chtDendrogram.Name = "chtDendrogram";
+            this.chtDendrogram.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Name = "srs";
@@ -482,20 +555,22 @@
             // lblFunctionals
             // 
             this.lblFunctionals.AutoSize = true;
+            this.lblFunctionals.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblFunctionals.Location = new System.Drawing.Point(539, 74);
             this.lblFunctionals.Name = "lblFunctionals";
-            this.lblFunctionals.Size = new System.Drawing.Size(35, 13);
+            this.lblFunctionals.Size = new System.Drawing.Size(11, 17);
             this.lblFunctionals.TabIndex = 7;
-            this.lblFunctionals.Text = "label7";
+            this.lblFunctionals.Text = "l";
             // 
             // lblInfo
             // 
             this.lblInfo.AutoSize = true;
+            this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblInfo.Location = new System.Drawing.Point(17, 13);
             this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(35, 13);
+            this.lblInfo.Size = new System.Drawing.Size(11, 17);
             this.lblInfo.TabIndex = 6;
-            this.lblInfo.Text = "label6";
+            this.lblInfo.Text = "l";
             // 
             // lblViewObject
             // 
@@ -546,6 +621,8 @@
             // 
             // cmB_Clusters
             // 
+            this.cmB_Clusters.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmB_Clusters.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmB_Clusters.FormattingEnabled = true;
             this.cmB_Clusters.Location = new System.Drawing.Point(20, 74);
             this.cmB_Clusters.Name = "cmB_Clusters";
@@ -582,6 +659,9 @@
             this.tbP_ResultsClusterization.ResumeLayout(false);
             this.tbC_Results.ResumeLayout(false);
             this.tbP_Dendrogram.ResumeLayout(false);
+            this.tbP_Dendrogram.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dGV_SequenceObjectsInDendrogram)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUD_InterclusterDistance)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chtDendrogram)).EndInit();
             this.tbP_Predetermined_number_of_clusters.ResumeLayout(false);
             this.tbP_Predetermined_number_of_clusters.PerformLayout();
@@ -634,6 +714,12 @@
         private System.Windows.Forms.RadioButton rdB_KmeansByLloyd;
         private System.Windows.Forms.RadioButton rdB_HierarchicalAgglomerativeMethod;
         private System.Windows.Forms.OpenFileDialog oFD_Loader;
+        private System.Windows.Forms.Label lblInterclusterDistance;
+        private System.Windows.Forms.Button btnCreateSeparationFromSection;
+        private System.Windows.Forms.NumericUpDown nUD_InterclusterDistance;
+        private System.Windows.Forms.DataGridView dGV_SequenceObjectsInDendrogram;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clnNumObj;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clnObj;
 
     }
 }

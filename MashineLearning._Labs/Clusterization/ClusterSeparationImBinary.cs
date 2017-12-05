@@ -59,7 +59,9 @@ namespace MashineLearning.Clusterization
 
         public bool AddObject(ImBinary new_object)
         {
-            if /*(*/(new_object == null)/* || (this.Objects[0].ColumnCount != new_object.ColumnCount) || (this.Objects[0].RowCount != new_object.RowCount))*/
+            if (new_object == null)
+                return false;
+            if ((this.Objects.Count != 0) && ((this.Objects[0].ColumnCount != new_object.ColumnCount) || (this.Objects[0].RowCount != new_object.RowCount)))
                 return false;
             this.Objects.Add(new_object);
             return true;
@@ -87,8 +89,7 @@ namespace MashineLearning.Clusterization
                             if (res > tmpDist)
                                 res = tmpDist;
                         }
-                    break;
-                    //return res;
+                    break;                    
 
                 case TypeOfInterclusterDistance.CompleteLinkage:
                     res = this.Objects[0].DistanceTo(otherCl.Objects[0]);
@@ -103,7 +104,7 @@ namespace MashineLearning.Clusterization
                                 res = tmpDist;
                         }
                     break;    
-                //return res;
+                
                 case TypeOfInterclusterDistance.AverageLinkage:
                     res = 0;
                     for (int i = 0, N1 = this.Objects.Count, N2 = otherCl.Objects.Count; i < N1; i++)
@@ -164,38 +165,145 @@ namespace MashineLearning.Clusterization
         {
             Label = label;
         }
+
+        public ClusterImBinary(List<ImBinary> start_objects, string label)
+            : this(label)
+        {
+            this.Objects.AddRange(start_objects);
+        }
     }
 
     class ClusterSeparationImBinary
     {
-        public readonly ClusterImBinary[] separation;
+        public readonly int HeightIm, WidthIm;
+        public readonly ClusterImBinary[] Separation;
 
-        public double FunctionalQ2
+        public double FunctionalQShtrich2 //отладить //детермінант матриці внутрішньокластерних коваріацій -> min
         {
             get
             {
-                Lab2.Matrix2D Eb = Lab2.Matrix2D.CreateMatrix(separation[0].Object(0).Size, separation[0].Object(0).Size);
-                //Lab2.Vector[][] images = new Lab2.Vector[separation.Length][];
-                for (int l = 0, K = separation.Length, N = 0; l < K; l++)
+                int N = 0, Nl, p = HeightIm * WidthIm;
+                Lab2.Matrix2D Sigma_B = Lab2.Matrix2D.CreateMatrix(p, p);
+                Lab2.Matrix2D Sigma_l = Lab2.Matrix2D.CreateMatrix(p, p);
+                Lab2.Matrix2D Sigma_l1 = Lab2.Matrix2D.CreateMatrix(p, 1);
+                Lab2.Matrix2D Sigma_l2 = Lab2.Matrix2D.CreateMatrix(1, p);
+                
+                ImBinary centerCluster_l;                
+                for (int l = 0, K = Separation.Length; l < K; l++)
                 {
-                    N += separation[0].Size;
-                    for (int i = 0, Nl = separation[0].Size; i < Nl; i++)
+                    N += (Nl = Separation[l].Size);
+                    centerCluster_l = Separation[l].GetCenter();
+                    for (int i = 0; i < Nl; i++)
                     {
-
+                        for (uint j = 0; j < p; j++)
+                        {
+                            Sigma_l1.SetElement(Separation[l].Object(i).GetProp(j) - centerCluster_l.GetProp(j), (int)j, 0);
+                            Sigma_l2.SetElement(Separation[l].Object(i).GetProp(j) - centerCluster_l.GetProp(j), 0, (int)j);
+                        }
+                        Sigma_l += (Sigma_l1 * Sigma_l2); 
                     }
+                    Sigma_l *= 1d / Nl;
+                    Sigma_B += Sigma_l;
                 }
-                throw new NotImplementedException();
+                return (Sigma_B * (1d / N)).ValueOfDeterminant;
             }
         }
 
-        public ClusterSeparationImBinary()
+        public double FunctionalQ2 //отладить //cума внутрішньокластерних дисперсій -> min
         {
-            separation = new ClusterImBinary[2];            
+            get
+            {
+                int N = 0, Nl, p = HeightIm * WidthIm;
+                Lab2.Matrix2D Sigma_B = Lab2.Matrix2D.CreateMatrix(p, p);
+                Lab2.Matrix2D Sigma_l = Lab2.Matrix2D.CreateMatrix(p, p);
+                Lab2.Matrix2D Sigma_l1 = Lab2.Matrix2D.CreateMatrix(p, 1);
+                Lab2.Matrix2D Sigma_l2 = Lab2.Matrix2D.CreateMatrix(1, p);
+
+                ImBinary centerCluster_l;
+                for (int l = 0, K = Separation.Length; l < K; l++)
+                {
+                    N += (Nl = Separation[l].Size);
+                    centerCluster_l = Separation[l].GetCenter();
+                    for (int i = 0; i < Nl; i++)
+                    {
+                        for (uint j = 0; j < p; j++)
+                        {
+                            Sigma_l1.SetElement(Separation[l].Object(i).GetProp(j) - centerCluster_l.GetProp(j), (int)j, 0);
+                            Sigma_l2.SetElement(Separation[l].Object(i).GetProp(j) - centerCluster_l.GetProp(j), 0, (int)j);
+                        }
+                        Sigma_l += (Sigma_l1 * Sigma_l2);
+                    }
+                    Sigma_l *= (1d / Nl);
+                    Sigma_B += Sigma_l;
+                    Sigma_l = Lab2.Matrix2D.CreateMatrix(p, p);
+                }
+                return (Sigma_B * (1d / N)).Trace;
+            }
         }
 
-        public ClusterSeparationImBinary(uint K)
+        public double FunctionalQ3 //отладить //cума попарних внутрішньокластерних відстаней -> min
         {
-            separation = new ClusterImBinary[K];
+            get
+            {
+                double result = 0;
+                for (int l = 0; l < Separation.Length; l++)
+                    for (int i = 0, Nl_1 = Separation[l].Size - 1; i < Nl_1; i++)
+                        for (int q = i + 1; q <= Nl_1; q++) 
+                            result += Separation[l].Object(i).DistanceTo(Separation[l].Object(q));
+                return result;
+            }
+        }
+
+        public double FunctionalQ4 //отладить //cума міжкластерних відстаней -> max
+        {
+            get
+            {
+                double result = 0;
+                for (int l = 0, K_1 = Separation.Length - 1; l < K_1; l++)
+                    for (int i = 0; i < Separation[l].Size; i++)
+                        for (int h = l + 1; h <= K_1; h++)
+                            for (int q = 0; q < Separation[h].Size; q++)
+                                result += Separation[l].Object(i).DistanceTo(Separation[h].Object(q));
+                return result;
+            }
+        }
+
+        public double FunctionalQ5 //отладить //відношення функціоналів -> min
+        {
+            get
+            {
+                long SumMultiNlNl_1 = 0, MultiNl = 0;
+                for (int l = 0; l < Separation.Length; l++)
+                {
+                    SumMultiNlNl_1 += Separation[l].Size * (Separation[l].Size - 1);
+                    for (int h = l + 1; h < Separation.Length; h++)
+                        MultiNl += Separation[l].Size * Separation[h].Size;
+                }
+                return 2 * FunctionalQ3 * MultiNl / (FunctionalQ4 * SumMultiNlNl_1);
+            }
+        }
+
+        public double FunctionalForK_means //отладить 
+        {
+            get
+            {
+                double result = 0;
+                ImBinary centerCluster_l;
+                for (int l = 0; l < Separation.Length; l++)
+                {
+                    centerCluster_l = Separation[l].GetCenter();
+                    for (int i = 0; i < Separation[l].Size; i++)
+                        result += Math.Pow(Separation[l].Object(i).DistanceTo(centerCluster_l), 2);
+                }
+                return result;
+            }
+        }
+
+        public ClusterSeparationImBinary(int heightIm, int widthIm, uint K = 2)
+        {
+            HeightIm = heightIm;
+            WidthIm = widthIm;
+            Separation = new ClusterImBinary[K];
         }
     }
 }
