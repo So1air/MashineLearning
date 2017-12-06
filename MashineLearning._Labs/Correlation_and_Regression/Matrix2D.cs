@@ -359,17 +359,10 @@ namespace Lab2
         private double[,] ExpurgationColumnAndRow(double[,] matrix, int row, int col)
         {
             double[,] new_matrix = new double[matrix.GetLength(0) - 1, matrix.GetLength(1) - 1];
-            int flag_row = 0, flag_col = 0;
-            for (int i = 0; i < new_matrix.GetLength(0); i++)
-                for (int j = 0; j < new_matrix.GetLength(1); j++)
-                {
-                    if (i == row)
-                        flag_row = 1;
-                    if (j == col)
-                        flag_col = 1;
-
-                    new_matrix[i, j] = matrix[i + flag_row, j + flag_col];
-                }
+            for (int i = 0; i < new_matrix.GetLength(0); i++)                            
+                for (int j = 0; j < new_matrix.GetLength(1); j++)                
+                    new_matrix[i, j] = matrix[i + ((i < row) ? 0 : 1), j + ((j < col) ? 0 : 1)];                
+            
             return new_matrix;
         }
 

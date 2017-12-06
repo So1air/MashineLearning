@@ -509,7 +509,7 @@ namespace Correlation_and_Regression
 
         public PolinomialRegressionInfo RestorePolinomialRegression(int p/*degree*/, double aljfa, out double quanOfStudent, out double quanOfFisher)
         {
-            if (p >= (this.Count - 1))
+            if ((p >= (this.Count - 1)) || (p <= 0))
                 throw new ArgumentOutOfRangeException("p");
             if ((aljfa <= 0) || (aljfa >= 1))
                 throw new ArgumentOutOfRangeException("aljfa");
@@ -548,7 +548,7 @@ namespace Correlation_and_Regression
                     A.SetElement(x_p_[j], k + 1, j - k);
             }
 
-            Lab2.Vector a = Lab2.SystemOfLinearAlgebraicEquations.CreateSystem(A, b).GetSolution(Lab2.SystemOfLinearAlgebraicEquations.MethodsForSolution.Square_RootMethod); 
+            Lab2.Vector a = Lab2.SystemOfLinearAlgebraicEquations.CreateSystem(A, b).GetSolution(Lab2.SystemOfLinearAlgebraicEquations.MethodsForSolution.Square_RootMethod);
             
             f = (x) =>
             {
@@ -566,32 +566,20 @@ namespace Correlation_and_Regression
 
             double S2_detA = S2_residual / (A = N * A).ValueOfDeterminant;
             double[] D_a = new double[p + 1];
-            for (int i = 0; i <= p; i++)            
+            for (int i = 0; i <= p; i++)
                 D_a[i] = S2_detA * A.AlgebraicalComplement(i, i);  
             
-            //double[][] cov_a = null;
-            //double[][] cov_a2 = null;
-            //if (p > 0)
-            //{
-            //    cov_a = new double[p + 1][];
-            //    cov_a2 = new double[p + 1][];
-            //    for (int i = 0; i < p; i++)
-            //        cov_a2[i] = new double[p - i];
-            //    for (int i = 1; i <= p; i++)
-            //    {
-            //        cov_a[i] = new double[i];
-            //        for (int j = 0; j < i; j++)
-            //        {
-            //            cov_a[i][j] = S2_detA * A.AlgebraicalComplement(j, i);
-            //            cov_a2[j][i - j - 1] = S2_detA * A.AlgebraicalComplement(i, j);
-            //        }
-            //    }                
-            //}
-
-            double[,] cov_a = new double[p + 1, p + 1];
-            for (int i = 0; i <= p; i++)
-                for (int j = 0; j <= p; j++)
-                    cov_a[i, j] = S2_detA * A.AlgebraicalComplement(j, i);
+            double[][] cov_a = null;
+            if (p > 0)
+            {
+                cov_a = new double[p + 1][];
+                for (int i = 1; i <= p; i++)
+                {
+                    cov_a[i] = new double[i];
+                    for (int j = 0; j < i; j++)
+                        cov_a[i][j] = S2_detA * A.AlgebraicalComplement(j, i);
+                }
+            }
 
             double[] a_bottom = new double[p + 1], 
                      a_top = new double[p + 1], 
@@ -607,49 +595,18 @@ namespace Correlation_and_Regression
                 else
                     a_top[i] = a_bottom[i] = double.NaN;
            
-            //???????????????
             Func<double, double> dev_f = (x) => 
             {
-                //double res = D_a[0],
-                //       x_pow = 1;
-                //for (int pow = 1; pow < p; pow++)
-                //{
-                //    x_pow *= x;
-                //    for (int i = pow, j = 0; j < i; i--, j++)
-                //        res += 2 * cov_a[i][j] * x_pow;
-                //    pow++;
-                //    x_pow *= x;
-                //    for (int i = pow, j = 0; j < i; i--, j++)
-                //        res += 2 * cov_a[i][j] * x_pow;
-                //    res += D_a[pow / 2] * x_pow;
-                //}
-                //for (int pow = p, maxpow = 2 * p + 1; pow < maxpow; pow++)
-                //{
-                //    x_pow *= x;
-                //    for (int i = p, j = pow - p; j < i; i--, j++)
-                //        res += 2 * cov_a[i][j] * x_pow;
-                //    pow++;
-                //    x_pow *= x;
-                //    for (int i = p, j = pow - p; j < i; i--, j++)
-                //        res += 2 * cov_a[i][j] * x_pow;
-                //    res += D_a[pow / 2] * x_pow;
-                //}
-
-                //double res = D_a[0];
-                //for (int i = 1; i <= p; i++)
-                //{
-                //    for (int j = 0; j < i; j++)
-                //        res += (cov_a2[j][i - j - 1] + cov_a[i][j]) * Math.Pow(x, i + j);
-                //    res += D_a[i] * Math.Pow(x, i + i);
-                //}
-
-                double res = 0;
-                for (int i = 0; i <= p; i++)
-                    for (int j = 0; j <= p; j++)
-                        res += cov_a[i, j] * Math.Pow(x, i + j); 
+                double res = D_a[0];
+                for (int i = 1; i <= p; i++)
+                {
+                    for (int j = 0; j < i; j++)
+                        res += 2 * cov_a[i][j] * Math.Pow(x, i + j);
+                    res += D_a[i] * Math.Pow(x, i + i);
+                }
                 return res;
+                
             };
-            //???????????????
             double value_quanOfStudent = quanOfStudent;
             Func<double, double> f_bottom = (x) => (f(x) - value_quanOfStudent * Math.Sqrt(dev_f(x)));
             Func<double, double> f_top = (x) => (f(x) + value_quanOfStudent * Math.Sqrt(dev_f(x)));
